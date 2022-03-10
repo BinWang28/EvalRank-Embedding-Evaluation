@@ -2,4 +2,4 @@
 Code for ACL 2022 paper:
 - **Just Rank: Rethinking Evaluation with Word and Sentence Similarities**
 
-Will update soon
+Will update soon (try to do it before April)
