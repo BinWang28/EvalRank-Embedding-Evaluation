@@ -63,7 +63,7 @@ If you find our package useful, please cite our paper.
 ```
     - Will update the ACL proceeding once it is out.
 
-Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com), [website](https://binwang28.github.io/)
+Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com)
 
 ## Acknowledge
 
