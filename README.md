@@ -5,6 +5,8 @@
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679):
     - **Accepted to ACL 2022 Main Conference**
 
+![title](img/logo.png)
+
 
 <div align="center">
 
