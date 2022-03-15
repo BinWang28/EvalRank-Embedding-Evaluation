@@ -51,7 +51,7 @@
 ## Citation
 
 If you find our package useful, please cite our paper.
-- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679):
+- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
 
 ```
 @article{evalrank_2022,
