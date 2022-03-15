@@ -12,7 +12,7 @@
 |-|-|
 | [Environment Setup](#Environment-Setup) 							| xx                    		    |
 | [Introduction](#Introduction)          							| xx                    		    |
-| [Support Architectures](#Support-Architecture) 					| xx                    		    |
+| [Supported Architectures](#Supported-Architectures) 					| xx                    		    |
 | [Quick Usage Guide](#Quick-Usage-Guide)							| xx                    		    |
 | [Benchmarking - Word](#Reproduce-the-result)						| xx                    		    |
 | [Benchmarking - Sentence](#Performance)							| xx                    		    |
@@ -30,7 +30,9 @@
 
     TODO
 
+## Supported Architectures 
 
+    TODO
 
 ## Citation
 
