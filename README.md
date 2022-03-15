@@ -61,7 +61,7 @@ If you find our package useful, please cite our paper.
   year={2022}
 }
 ```
-Will update for the ACL proceeding once it is out.
+    - Will update for the ACL proceeding once it is out.
 
 Contact: [bwang28c@gmail.com](mailto:bwang28c@gmail.com)
 
