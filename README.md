@@ -1,7 +1,7 @@
 # EvalRank-Embedding-Evaluation
 
 <p align="center">
-  <img src="img/logo.png" width="400" height="500" height: auto />
+  <img src="img/logo.png" width="400" height="auto" />
 </p>
 
 ## Outline
