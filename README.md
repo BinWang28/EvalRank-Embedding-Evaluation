@@ -10,7 +10,7 @@
 
 | Section | Description |
 |-|-|
-| [Installation](#Installation) 									| xx                    		    |
+| [Environment Setup](#EnvironmentSetup) 									| xx                    		    |
 | [Support Architectures](#Support-Architecture) 					| xx                    		    |
 | [Quick Usage Guide](#Quick-Usage-Guide)							| xx                    		    |
 | [Benchmarking - Word](#Reproduce-the-result)						| xx                    		    |
@@ -21,7 +21,7 @@
 
 </div>
 
-
+## Environment Setup
 
 ## Citation
 
