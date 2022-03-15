@@ -63,6 +63,8 @@ If you find our package useful, please cite our paper.
 ```
 Will update for the ACL proceeding once it is out.
 
+Contact: [bwang28c@gmail.com](mailto:bwang28c@gmail.com)
+
 ## Acknowledge
 
     xx xx xx xx
