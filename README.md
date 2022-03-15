@@ -10,7 +10,7 @@
 
 | Section | Description |
 |-|-|
-| [Environment Setup](#EnvironmentSetup) 									| xx                    		    |
+| [Environment Setup](#Environment-Setup) 									| xx                    		    |
 | [Support Architectures](#Support-Architecture) 					| xx                    		    |
 | [Quick Usage Guide](#Quick-Usage-Guide)							| xx                    		    |
 | [Benchmarking - Word](#Reproduce-the-result)						| xx                    		    |
