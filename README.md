@@ -11,7 +11,7 @@
 | Section | Description |
 |-|-|
 | [Installation](#Installation) 									| xx                    		    |
-| [Support Architecture](#Support-Architecture) 					| xx                    		    |
+| [Support Architectures](#Support-Architecture) 					| xx                    		    |
 | [Quick Usage Guide](#Quick-Usage-Guide)							| xx                    		    |
 | [Benchmarking - Word](#Reproduce-the-result)						| xx                    		    |
 | [Benchmarking - Sentence](#Performance)							| xx                    		    |
