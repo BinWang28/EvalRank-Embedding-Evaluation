@@ -6,7 +6,7 @@
     - **Accepted to ACL 2022 Main Conference**
 
 
-<center>
+<div align="center">
 
 | Section | Description |
 |-|-|
@@ -19,7 +19,7 @@
 | [Citation](#Citation)												| Citation                    		|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
-</center>
+</div>
 
 
 
