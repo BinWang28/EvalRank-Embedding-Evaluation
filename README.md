@@ -1,6 +1,6 @@
 # EvalRank-Embedding-Evaluation
-- **Just Rank: Rethinking Evaluation with Word and Sentence Similarities** 
-    - (Accepted to ACL 2022 Main Conference)
+- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679):
+    - Accepted to ACL 2022 Main Conference
 
 
 
