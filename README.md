@@ -10,12 +10,12 @@
 
 | Section | Description |
 |-|-|
-| [Environment Setup](#Environment-Setup) 							| xx                    		    |
 | [Introduction](#Introduction)          							| xx                    		    |
-| [Supported Architectures](#Supported-Architectures) 					| xx                    		    |
-| [Quick Usage Guide](#Quick-Usage-Guide)							| xx                    		    |
-| [Benchmarking - Word](#Reproduce-the-result)						| xx                    		    |
-| [Benchmarking - Sentence](#Performance)							| xx                    		    |
+| [Environment Setup](#Environment-Setup) 							| xx                    		    |
+| [Supported Architectures](#Supported-Architectures) 				| xx                    		    |
+| [Quick User Guide](#Quick-User-Guide)							| xx                    		    |
+| [Benchmarking - Word](#Benchmarking-Word)						| xx                    		    |
+| [Benchmarking - Sentence](#Benchmarking-Sentence)							| xx                    		    |
 | [More Scripts](#More-Scripts)                                     | xx                    		    |
 | [Citation](#Citation)												| Citation                    		|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
@@ -31,6 +31,18 @@
     TODO
 
 ## Supported Architectures 
+
+    TODO
+
+## Quick User Guide
+
+    TODO
+
+## Benchmarking - Word
+
+    TODO
+
+## Benchmarking - Sentence
 
     TODO
 
