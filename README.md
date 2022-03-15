@@ -21,10 +21,20 @@ Code for ACL 2022 paper:
 
 ## Citation
 
-    xxx
+If you find our package useful, please cite our paper: [Just Rank: Rethinking Evaluation with Word and Sentence Similarities](https://arxiv.org/abs/2203.02679):
+
+```
+@article{evalrank_2022,
+  title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
+  author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
+  journal={arXiv preprint arXiv:2203.02679},
+  year={2022}
+}
+```
+Will update for the ACL proceeding once it is out.
 
 ## Acknowledge
 
-    xxx
+    xx xx xx xx
 
 To be finished... (I will try to finished it before April)
