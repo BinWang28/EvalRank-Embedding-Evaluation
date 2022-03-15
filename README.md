@@ -14,8 +14,8 @@
 | [Environment Setup](#Environment-Setup) 							| xx                    		    |
 | [Supported Architectures](#Supported-Architectures) 				| xx                    		    |
 | [Quick User Guide](#Quick-User-Guide)							| xx                    		    |
-| [Benchmarking - Word](#Benchmarking-Word)						| xx                    		    |
-| [Benchmarking - Sentence](#Benchmarking-Sentence)							| xx                    		    |
+| [Benchmarking - Word](#Benchmarking---Word)						| xx                    		    |
+| [Benchmarking - Sentence](#Benchmarking---Sentence)							| xx                    		    |
 | [More Scripts](#More-Scripts)                                     | xx                    		    |
 | [Citation](#Citation)												| Citation                    		|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
