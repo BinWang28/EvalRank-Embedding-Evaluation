@@ -22,6 +22,7 @@ Code for ACL 2022 paper:
 ## Citation
 
 If you find our package useful, please cite our paper: 
+
 [Just Rank: Rethinking Evaluation with Word and Sentence Similarities](https://arxiv.org/abs/2203.02679):
 
 ```
