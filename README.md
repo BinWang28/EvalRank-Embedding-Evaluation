@@ -64,7 +64,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 
 ## Environment Setup
 
-    TODO
+    bash environment.sh
 
 ## Supported Architectures 
 
