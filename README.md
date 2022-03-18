@@ -13,12 +13,12 @@
 
 | Section | Description |
 |-|-|
-| [Introduction](#Introduction)          							| xx                    		    |
-| [Environment Setup](#Environment-Setup) 							| xx                    		    |
-| [Supported Architectures](#Supported-Architectures) 				| xx                    		    |
-| [Quick User Guide](#Quick-User-Guide)							    | xx                    		    |
-| [Benchmarking - Word](#Benchmarking---Word)						| xx                    		    |
-| [Benchmarking - Sentence](#Benchmarking---Sentence)				| xx                    		    |
+| [Introduction](#Introduction)          							| Overview                 		    |
+| [Environment Setup](#Environment-Setup) 							| Environments             		    |
+| [Supported Architectures](#Supported-Architectures) 				| Example Architectures    		    |
+| [Quick User Guide](#Quick-User-Guide)							    | Scripts                 		    |
+| [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
+| [Benchmarking - Sentence](#Benchmarking---Sentence)				| Leaderboard              		    |
 | [Citation](#Citation)												| Citation                    		|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
