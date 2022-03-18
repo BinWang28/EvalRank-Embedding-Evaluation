@@ -26,7 +26,14 @@
 
 ## Introduction
 
-    TODO
+In this project, we provide a easy-to-use evaluation toolkit for both word and sentence embedding evaluation.
+- Word Embedding Evaluation
+    - 13 Word Similarity Datasets
+    - EvalRank for Words
+- Sentence Embedding Evaluation
+    - 10 Downstream Tasks
+    - 7 Semantic Textual Similarity tasks
+    - EvalRank for Sentences
 
 ## Environment Setup
 
