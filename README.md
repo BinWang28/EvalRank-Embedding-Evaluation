@@ -28,27 +28,27 @@
 
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 
-- Word Embedding Evaluation
-    - EvalRank (Word-Level)
-    - Word Similarity Tasks
-        - WS-353
-        - WS-353-SIM
-        - WS-353-REL
-        - MC-30
-        - RG-65
-        - Rare-Word
-        - MEN
-        - MTurk-287
-        - MTurk-771
-        - YP-130
-        - SimLex-999
-        - Verb-143
-        - SimVerb-3500
-
-- Sentence Embedding Evaluation
-    - EvalRank (Sentence-Level)
-    - 10 Downstream Tasks
-    - 7 Semantic Textual Similarity tasks
+-Evaluation
+    - Word Embedding
+        - EvalRank (Word-Level)
+        - Word Similarity Tasks
+            - WS-353
+            - WS-353-SIM
+            - WS-353-REL
+            - MC-30
+            - RG-65
+            - Rare-Word
+            - MEN
+            - MTurk-287
+            - MTurk-771
+            - YP-130
+            - SimLex-999
+            - Verb-143
+            - SimVerb-3500
+    - Sentence Embedding
+        - EvalRank (Sentence-Level)
+        - 10 Downstream Tasks
+        - 7 Semantic Textual Similarity tasks
 
 
 ## Environment Setup
