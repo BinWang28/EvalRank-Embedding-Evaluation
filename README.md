@@ -45,7 +45,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
         - Verb-143
         - SimVerb-3500
 - **Sentence Embedding Evaluation**
-    - EvalRank (Sentence-Level)
+    - [EvalRank (Sentence-Level)](https://arxiv.org/abs/2203.02679)
     - Downstream Tasks
         - MR
         - CR
