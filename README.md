@@ -70,7 +70,10 @@ Please lookinto the details of the following script file for setting up the envi
 
 ## Supported Architectures 
 
-    TODO
+We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
+
+- xd
+
 
 ## Quick User Guide
 
