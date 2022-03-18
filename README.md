@@ -29,6 +29,9 @@
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 
 - Word Embedding Evaluation
+
+    - EvalRank for Words
+
     - Word Similarity Tasks
         - WS-353
         - WS-353-SIM
@@ -43,8 +46,6 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
         - SimLex-999
         - Verb-143
         - SimVerb-3500
-
-    - EvalRank for Words
 
 - Sentence Embedding Evaluation
     - 10 Downstream Tasks
