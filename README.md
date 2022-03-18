@@ -31,7 +31,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 - **Word Embedding Evaluation**
     - [EvalRank (Word-Level)](https://arxiv.org/abs/2203.02679)
     - Word Similarity Tasks
-        - WS-353
+        - [WS-353](https://dl.acm.org/doi/10.1145/503104.503110)
         - WS-353-SIM
         - WS-353-REL
         - MC-30
