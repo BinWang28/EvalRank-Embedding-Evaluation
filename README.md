@@ -24,6 +24,21 @@
 
 </div>
 
+## Citation
+
+If you find our package useful, please cite our paper.
+- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
+
+```
+@article{evalrank_2022,
+  title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
+  author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
+  journal={arXiv preprint arXiv:2203.02679},
+  year={2022}
+}
+```
+    - Will update the ACL proceeding once it is out.
+
 ## Introduction
 
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
@@ -89,25 +104,14 @@ TODO: table for benchmarking results
 
 TODO: table for benchmarking results
 
-## Citation
-
-If you find our package useful, please cite our paper.
-- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
-
-```
-@article{evalrank_2022,
-  title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
-  author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
-  journal={arXiv preprint arXiv:2203.02679},
-  year={2022}
-}
-```
-    - Will update the ACL proceeding once it is out.
-
-Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
 
 ## Acknowledge
 
     xx xx xx xx
 
+
+Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
+
+
 To be finished... (I will try to finished it before April)
+
