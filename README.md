@@ -6,9 +6,6 @@
 
 ## Outline
 
-- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
-    - To appear in **ACL 2022 Main Conference**
-
 <div align="center">
 
 | Section | Description |
@@ -28,6 +25,7 @@
 
 If you find our package useful, please cite our paper.
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
+    - To appear in **ACL 2022 Main Conference**
 
 ```
 @article{evalrank_2022,
