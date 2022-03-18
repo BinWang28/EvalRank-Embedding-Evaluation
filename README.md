@@ -72,12 +72,14 @@ Please lookinto the details of the following script file for setting up the envi
 
 We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
 
-- xd
-
+- Word Embeddings
+    - TODO: also post-processing
+- Sentence Embeddings
+    - TODO: BERT, SBERT, BERT-flow, BERT-whitening, xxx
 
 ## Quick User Guide
 
-    TODO
+TODO: scripts for quick evaluation
 
 ## Benchmarking - Word
 
