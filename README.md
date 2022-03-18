@@ -29,7 +29,7 @@
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 
 - **Word Embedding Evaluation**
-    - EvalRank (Word-Level)
+    - [EvalRank (Word-Level)]((https://arxiv.org/abs/2203.02679))
     - Word Similarity Tasks
         - WS-353
         - WS-353-SIM
