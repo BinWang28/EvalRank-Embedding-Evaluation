@@ -47,7 +47,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 - **Sentence Embedding Evaluation**
     - [EvalRank (Sentence-Level)](https://arxiv.org/abs/2203.02679)
     - Downstream Tasks
-        - MR
+        - [MR](https://aclanthology.org/P05-1015/)
         - CR
         - SUBJ
         - MPQA
