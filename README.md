@@ -46,8 +46,20 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
         - SimVerb-3500
 - **Sentence Embedding Evaluation**
     - EvalRank (Sentence-Level)
-    - 10 Downstream Tasks
-    - 7 Semantic Textual Similarity tasks
+    - Downstream Tasks
+        - MR
+        - CR
+        - SUBJ
+        - MPQA
+        - SST2
+        - TREC
+        - MRPC
+        - SICK-E
+        - SCICITE
+    - Semantic Textual Similarity (STS) Tasks
+        - STS 12 ~ 16
+        - STS-Benchmark
+        - STR
 
 
 ## Environment Setup
