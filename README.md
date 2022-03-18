@@ -83,11 +83,11 @@ TODO: scripts for quick evaluation
 
 ## Benchmarking - Word
 
-    TODO
+TODO: table for benchmarking results
 
 ## Benchmarking - Sentence
 
-    TODO
+TODO: table for benchmarking results
 
 ## Citation
 
