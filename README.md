@@ -65,6 +65,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 ## Environment Setup
 
 Please lookinto the details of the following script file for setting up the environment.
+
     bash environment.sh
 
 ## Supported Architectures 
