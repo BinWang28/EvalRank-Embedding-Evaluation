@@ -10,4 +10,4 @@ We follow the GloVe embedding format in the toy embedding. Please make sure foll
 ## More embedding sources
 - GloVe
     - https://nlp.stanford.edu/projects/glove/
-- TODO
+- TODO: list more sources
