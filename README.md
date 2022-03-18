@@ -30,7 +30,20 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 
 - Word Embedding Evaluation
     - Word Similarity Tasks
-        - xx
+        - WS-353
+        - WS-353-SIM
+        - WS-353-REL
+        - MC-30
+        - RG-65
+        - Rare-Word
+        - MEN
+        - MTurk-287
+        - MTurk-771
+        - YP-130
+        - SimLex-999
+        - Verb-143
+        - SimVerb-3500
+
     - EvalRank for Words
 
 - Sentence Embedding Evaluation
