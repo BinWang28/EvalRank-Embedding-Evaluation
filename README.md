@@ -13,18 +13,18 @@
 
 | Section | Description |
 |-|-|
+| [Reference](#Reference)												| Reference                    		|
 | [Introduction](#Introduction)          							| Overview                 		    |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
 | [Supported Architectures](#Supported-Architectures) 				| Example Architectures    		    |
 | [Quick User Guide](#Quick-User-Guide)							    | Scripts                 		    |
 | [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
 | [Benchmarking - Sentence](#Benchmarking---Sentence)				| Leaderboard              		    |
-| [Citation](#Citation)												| Citation                    		|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
 </div>
 
-## Citation
+## Reference
 
 If you find our package useful, please cite our paper.
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
