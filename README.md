@@ -26,9 +26,10 @@
 
 ## Introduction
 
-In this project, we provide a easy-to-use evaluation toolkit for both word and sentence embedding evaluation.
+In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 - Word Embedding Evaluation
     - 13 Word Similarity Datasets
+        - xx
     - EvalRank for Words
 - Sentence Embedding Evaluation
     - 10 Downstream Tasks
