@@ -72,7 +72,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 - **Word Level Similarity and EvalRank**
 
-    > bash word_evaluate.sh
+    '''bash word_evaluate.sh'''
 
 ## Benchmarking - Word
 
