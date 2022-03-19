@@ -17,7 +17,7 @@ import logging
 import argparse
 
 import w_data_loader
-#import w_models
+import w_model
 #import w_evaluation
 
 logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.INFO)
@@ -58,10 +58,9 @@ if __name__ == "__main__":
 
     # - - - - - - - - - - - - - - - - -
     # run evaluation
+    # load data
     word_pairs_data = w_data_loader.Word_dataset_loader(config)
-    
-    
-    
-    #word_emb_model  = models.Word_embedding_model(config)
+    # load embedding model
+    word_emb_model  = w_model.Word_embedding_model(config)
     #our_evaluator   = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
     #ws_ori, ws_post, rank_results = our_evaluator.eval()
