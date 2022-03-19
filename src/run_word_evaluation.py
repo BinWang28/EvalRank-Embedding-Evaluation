@@ -18,7 +18,7 @@ import argparse
 
 import w_data_loader
 import w_model
-#import w_evaluation
+import w_evaluation
 
 logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.INFO)
 
@@ -65,5 +65,5 @@ if __name__ == "__main__":
     # load embedding model
     word_emb_model = w_model.Word_embedding_model(config)
     # evaluation
-    our_evaluator = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
+    our_evaluator = w_evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
     our_evaluator.eval()

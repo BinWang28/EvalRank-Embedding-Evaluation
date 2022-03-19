@@ -52,7 +52,6 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
     - Semantic Textual Similarity (STS) Tasks
         - STS 12 ~ 16, STS-Benchmark, [STR](https://arxiv.org/pdf/2110.04845.pdf)
 
-
 ## Environment Setup
 
 Please lookinto the details of the following script file for setting up the environment.
