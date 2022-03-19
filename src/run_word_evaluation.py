@@ -12,25 +12,19 @@
 # ----------			---	----------------------------------------------------------
 ###
 
-
-import pdb
-# here put the import lib
-import os
 import sys
 import logging
 import argparse
 
-import data_loader
-import models
-import evaluation
+import w_data_loader
+#import w_models
+#import w_evaluation
 
 logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.INFO)
 
 
 if __name__ == "__main__":
-    '''
-        this is the main file for running word embedding evaluations for both similarity and ranking
-    '''
+
     # - - - - - - - - - - - - - - - - -
     # arguments
     parser = argparse.ArgumentParser()
@@ -40,6 +34,8 @@ if __name__ == "__main__":
                         help="distance measure between embeddings: cos, l2")
     parser.add_argument("--eval_type", type=str, default=None,
                         help="evaluation types: similarity,ranking")
+    parser.add_argument("--background_vocab_type", type=str, default=None,
+                        help="vocabulary used for background: basic, wiki")
     config = parser.parse_args()
 
     # - - - - - - - - - - - - - - - - -
@@ -52,6 +48,7 @@ if __name__ == "__main__":
     # - - - - - - - - - - - - - - - - -
 
     config.eval_type = config.eval_type.split(',')
+    config.background_vocab_type = config.background_vocab_type.split(',')
    
     # display parameters
     logging.info("*** Parameters ***")
@@ -61,7 +58,10 @@ if __name__ == "__main__":
 
     # - - - - - - - - - - - - - - - - -
     # run evaluation
-    word_pairs_data = data_loader.Word_similarity_dataset_loader(config)
-    word_emb_model  = models.Word_embedding_model(config)
-    our_evaluator   = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
-    ws_ori, ws_post, rank_results = our_evaluator.eval()
+    word_pairs_data = w_data_loader.Word_dataset_loader(config)
+    
+    
+    
+    #word_emb_model  = models.Word_embedding_model(config)
+    #our_evaluator   = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
+    #ws_ori, ws_post, rank_results = our_evaluator.eval()
