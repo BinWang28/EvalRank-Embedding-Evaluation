@@ -10,9 +10,6 @@ echo " "
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 WORD_EMB_PATH='models/word_emb/toy_emb.txt' # 'models/word_emb/glove.840B.300d.txt'
-
-WORD_EMB_PATH='/data07/binwang/research/EvalRank/models/word2vec-google/GoogleNews-vectors-negative300.txt'
-
 EVAL_TYPE='similarity,ranking' # 'similarity', 'ranking'
 DIST_METRIC='cos' # 'cos', 'l2'
 BG_VOCAB='basic,wiki' # 'basic', 'wiki'
