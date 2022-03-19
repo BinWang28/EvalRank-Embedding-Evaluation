@@ -23,3 +23,5 @@ python src/run_word_evaluation.py       \
         --pos_pairs_type                ws \
         --ws_pos_ratio                  0.25 \
         --background_vocab_type         ws
+
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
