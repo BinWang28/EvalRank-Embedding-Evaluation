@@ -65,5 +65,5 @@ if __name__ == "__main__":
     # load embedding model
     word_emb_model = w_model.Word_embedding_model(config)
     # evaluation
-    our_evaluator = w_evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
+    our_evaluator = w_evaluation.Word_emb_evaluator(config, word_pairs_data, word_emb_model)
     our_evaluator.eval()

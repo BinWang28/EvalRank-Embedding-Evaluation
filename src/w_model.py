@@ -111,9 +111,7 @@ class Word_embedding_model:
 
 
     def compute_embedding(self, word):
-        '''
-            return ori and post embedding when word provided
-        '''
+        ''' return ori and post embedding when word provided '''
 
         # return average vector if not in the database
         word = word.lower()

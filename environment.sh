@@ -10,7 +10,9 @@ conda activate evalrank_env
 # word evaluation essentials
 conda install -c anaconda scikit-learn --yes
 
+conda install -c conda-forge tqdm --yes
 
+conda install -c conda-forge prettytable --yes
 
 
 
