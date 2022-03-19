@@ -81,7 +81,8 @@ bash word_evaluate.sh
 | Word Embedding | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
 | glove.840B.300d.txt | List all *new or modified* files | --- | --- |
-| `git diff` | Show file differences that **haven't been** staged | --- | --- |
+| models/word2vec-google/GoogleNews-vectors-negative300.txt | Show file differences that **haven't been** staged | --- | --- |
+| models/word2vec-google/GoogleNews-vectors-negative300.txt | Show file differences that **haven't been** staged | --- | --- |
 
 
 ## Benchmarking - Sentence
