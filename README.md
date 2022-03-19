@@ -70,7 +70,8 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 ## Quick User Guide
 
-TODO: scripts for quick evaluation
+- Word Level Similarity and EvalRank
+    '''x'''
 
 ## Benchmarking - Word
 
