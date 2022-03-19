@@ -7,7 +7,7 @@ currentDate=`date`
 echo $currentDate
 echo " "
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-WORD_EMB_PATH='models/word_emb/toy_emb.txt'
+WORD_EMB_PATH='models/word_emb/glove.840B.300d.txt'
 EVAL_TYPE='similarity,ranking'
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 echo " "
