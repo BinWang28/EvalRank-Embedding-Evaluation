@@ -78,11 +78,14 @@ bash word_evaluate.sh
 
 ## Benchmarking - Word
 
-| Word Embedding | EvalRank (MRR) | Hits1 | Hits3 |
+| Word Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
 | glove.840B.300d.txt | 13.15 | 4.66 | 15.72 |
 | GoogleNews-vectors-negative300.txt | x | --- | --- |
-| models/word2vec-google/GoogleNews-vectors-negative300.txt | xx | --- | --- |
+| crawl-300d-2M.vec | xx | --- | --- |
+| dict2vec-300d.vec | xx | --- | --- |
+
+- More benchmarking results can be found in this [page]().
 
 
 ## Benchmarking - Sentence
