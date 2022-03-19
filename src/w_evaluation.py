@@ -58,7 +58,7 @@ class Word_emb_evaluator:
 
     
     def eval_for_similarity(self):
-        ''' evaluate the embeddings (ori, post) on similarity task '''
+        ''' evaluate the embeddings on similarity task '''
 
         results  = {}
 
@@ -94,14 +94,14 @@ class Word_emb_evaluator:
         table = PrettyTable(['Index', 'METHOD', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
         count = 1
         for dataset, resu in results.items():
-            table.add_row([count, 'Ori Emb', dataset, resu['Pearsaon Corr'], resu['Spearman Corr'], resu['Kendall Corr']])
+            table.add_row([count, 'Emb', dataset, resu['Pearsaon Corr'], resu['Spearman Corr'], resu['Kendall Corr']])
             count += 1
         
         return table, results
 
 
     def eval_for_ranking(self):
-        ''' evaluate the embeddings (ori, post) on ranking task '''
+        ''' evaluate the embeddings on ranking task '''
 
         ranks      = []
         vocab_embs = [self.word_emb_model.compute_embedding(word) for word in self.word_pairs_data.vocab]
@@ -122,14 +122,15 @@ class Word_emb_evaluator:
             
             elif self.dist_metric == 'l2':
             
-                pos_score_ori     = 1 / (np.linalg.norm(w1_emb - w2_emb) + 1)
+                pos_score         = 1 / (np.linalg.norm(w1_emb - w2_emb) + 1)
                 background_scores = 1 / (np.linalg.norm((vocab_embs - w1_emb),axis=1) + 1)
                 background_scores = np.sort(background_scores)[::-1]
 
             else: 
                 sys.exit("Distance Metric NOT SUPPORTED: {}".format(self.dist_metric))
             
-            rank = len(background_scores) - np.searchsorted(background_scores[::-1], pos_score_ori, side='right')
+            rank = len(background_scores) - np.searchsorted(background_scores[::-1], pos_score, side='right')
+
             if rank == 0: rank = 1
             ranks.append(int(rank))
 
@@ -142,18 +143,17 @@ class Word_emb_evaluator:
         for i in range(hits_max_bound):
             hits_scores.append(sum(np.array(ranks)<=(i+1))/len(ranks))
 
-        res_rank = {
-                    'MR_ori'    : MR,
-                    'MRR_ori'   : MRR,}
+        res_rank = {'MR'    : MR,
+                    'MRR'   : MRR}
 
-        for i in range(hits_max_bound): res_rank['hits_'+str(i+1)+'_ori']  = hits_scores[i]
-
+        for i in range(hits_max_bound): res_rank['hits_'+str(i+1)]  = hits_scores[i]
 
         table = PrettyTable(['Scores', 'Emb'])
         table.add_row(['MR', MR])
         table.add_row(['MRR', MRR])
         
         for i in range(hits_max_bound):
-            table.add_row(['Hits@'+str(i+1), res_rank['hits_'+str(i+1)+'_ori']])
+            if i in [0,2]:
+                table.add_row(['Hits@'+str(i+1), res_rank['hits_'+str(i+1)]])
 
         return table, res_rank

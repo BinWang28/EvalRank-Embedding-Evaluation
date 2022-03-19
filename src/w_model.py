@@ -44,6 +44,10 @@ class Word_embedding_model:
 
         self.wvec_dim = self.word_emb.shape[1]
 
+        if config.centralization:
+            self.word_emb = self.word_emb - self.word_emb.mean(axis=0, keepdims=True)
+            self.word_emb_avg  = np.mean(self.word_emb, axis=0)
+
         if config.normalization == True:
             self.normalizing_word_vectors()
         logging.info('Note: out-of-vocab words, the average embedding is returned.')
@@ -102,7 +106,7 @@ class Word_embedding_model:
 
 
     def normalizing_word_vectors(self):
-        ''' normalizing word vectors for both original embedding and processed embedding '''
+        ''' normalizing word vectors '''
 
         logging.info('Normalizing word vectors')
 
@@ -111,7 +115,7 @@ class Word_embedding_model:
 
 
     def compute_embedding(self, word):
-        ''' return ori and post embedding when word provided '''
+        ''' return embedding when word provided '''
 
         # return average vector if not in the database
         word = word.lower()
