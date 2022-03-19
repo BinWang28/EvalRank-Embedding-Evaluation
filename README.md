@@ -80,9 +80,9 @@ bash word_evaluate.sh
 
 | Word Embedding | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
-| glove.840B.300d.txt | List all *new or modified* files | --- | --- |
-| models/word2vec-google/GoogleNews-vectors-negative300.txt | Show file differences that **haven't been** staged | --- | --- |
-| models/word2vec-google/GoogleNews-vectors-negative300.txt | Show file differences that **haven't been** staged | --- | --- |
+| glove.840B.300d.txt | 13.15 | 4.66 | 15.72 |
+| GoogleNews-vectors-negative300.txt | x | --- | --- |
+| models/word2vec-google/GoogleNews-vectors-negative300.txt | xx | --- | --- |
 
 
 ## Benchmarking - Sentence
