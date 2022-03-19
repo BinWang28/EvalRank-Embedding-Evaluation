@@ -1,7 +1,14 @@
 #!/bin/bash
 
+echo " "
+currentDate=`date`
+echo $currentDate
+echo " "
+
+
 WORD_EMB_PATH='xxxx'
-D
+
+
 
 
 echo $WORD_EMB_PATH
