@@ -108,7 +108,3 @@ TODO: table for benchmarking results
 
 
 Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
-
-
-To be finished... (I will try to finished it before April)
-
