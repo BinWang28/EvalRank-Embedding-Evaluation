@@ -104,7 +104,7 @@ TODO: table for benchmarking results
 
 ## Acknowledge
 
-- xx xx xx xx
+- We borrow a big portion of sentence embedding evaluation from [SentEval](https://github.com/facebookresearch/SentEval).
 
 
 Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
