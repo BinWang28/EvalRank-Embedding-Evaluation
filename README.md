@@ -85,7 +85,7 @@ bash word_evaluate.sh
 | crawl-300d-2M.vec | xx | --- | --- |
 | dict2vec-300d.vec | xx | --- | --- |
 
-- More benchmarking results can be found in this page: [word_rank](./benchmarking/word_evalrank.md), [word_similarity](./benchmarking/word_similarity.md).
+- More benchmarking results can be found in this page: [word_evalrank](./benchmarking/word_evalrank.md), [word_similarity](./benchmarking/word_similarity.md).
 
 
 ## Benchmarking - Sentence
