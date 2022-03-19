@@ -36,7 +36,7 @@
 | [dict2vec-300d.vec](https://github.com/tca19/dict2vec) | xx | xx | xx |
 
 
-** In the previous version of our paper, Table 5 (a) used the wrong version without augmentation with wiki vocabulary. The result is shown as below: **
+**In the previous version of our paper, Table 5 (a) used the wrong version without augmentation with wiki vocabulary. The result is shown as below:**
 
 | Word Embedding (cos) w/o wiki vocab | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
