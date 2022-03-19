@@ -70,7 +70,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 ## Quick User Guide
 
-- Word Level Similarity and EvalRank
+- **Word Level Similarity and EvalRank**
 
     > bash word_evaluate.sh
 
