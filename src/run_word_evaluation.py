@@ -36,6 +36,8 @@ if __name__ == "__main__":
                         help="evaluation types: similarity,ranking")
     parser.add_argument("--background_vocab_type", type=str, default=None,
                         help="vocabulary used for background: basic, wiki")
+    parser.add_argument("--post_process", type=str, default=None,
+                        help="whether to do post-processing on word embedding")
     config = parser.parse_args()
 
     # - - - - - - - - - - - - - - - - -
@@ -49,7 +51,8 @@ if __name__ == "__main__":
 
     config.eval_type = config.eval_type.split(',')
     config.background_vocab_type = config.background_vocab_type.split(',')
-   
+    config.centralization = True
+
     # display parameters
     logging.info("*** Parameters ***")
     for item, value in vars(config).items():
@@ -57,10 +60,10 @@ if __name__ == "__main__":
     logging.info("")
 
     # - - - - - - - - - - - - - - - - -
-    # run evaluation
     # load data
     word_pairs_data = w_data_loader.Word_dataset_loader(config)
     # load embedding model
-    word_emb_model  = w_model.Word_embedding_model(config)
-    #our_evaluator   = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
-    #ws_ori, ws_post, rank_results = our_evaluator.eval()
+    word_emb_model = w_model.Word_embedding_model(config)
+    # evaluation
+    our_evaluator = evaluation.Word_emb_evaluator(word_pairs_data, word_emb_model, config)
+    our_evaluator.eval()

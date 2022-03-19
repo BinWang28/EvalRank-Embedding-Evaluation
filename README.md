@@ -44,8 +44,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 - **Word Embedding Evaluation**
     - [EvalRank (Word-Level)](https://arxiv.org/abs/2203.02679)
     - [Word Similarity Tasks](https://arxiv.org/abs/1901.09785)
-        - [WS-353](https://dl.acm.org/doi/10.1145/503104.503110)
-        - [WS-353-SIM](https://aclanthology.org/N09-1003/)
+        - [WS-353](https://dl.acm.org/doi/10.1145/503104.503110), [WS-353-SIM](https://aclanthology.org/N09-1003/)
         - [WS-353-REL](https://aclanthology.org/N09-1003/)
         - [MC-30](https://www.tandfonline.com/doi/abs/10.1080/01690969108406936)
         - [RG-65](https://dl.acm.org/doi/10.1145/365628.365657)

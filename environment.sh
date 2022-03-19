@@ -8,6 +8,7 @@ conda create -n evalrank_env python=3.8 --yes
 conda activate evalrank_env
 
 # word evaluation essentials
+conda install -c anaconda scikit-learn --yes
 
 
 
