@@ -104,7 +104,7 @@ TODO: table for benchmarking results
 
 ## Acknowledge
 
-    xx xx xx xx
+- xx xx xx xx
 
 
 Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
