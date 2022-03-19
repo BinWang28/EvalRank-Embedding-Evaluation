@@ -65,7 +65,6 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 - Word Embeddings
     - Any word embedding files follow the [THIS FORMAT](./models/word_emb/).
     - Integrate one post-processing method.
-    
 - Sentence Embeddings
     - TODO: BERT, SBERT, BERT-flow, BERT-whitening, xxx
 
