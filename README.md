@@ -48,19 +48,9 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 - **Sentence Embedding Evaluation**
     - [EvalRank (Sentence-Level)](https://arxiv.org/abs/2203.02679)
     - Downstream Tasks
-        - [MR](https://aclanthology.org/P05-1015/)
-        - CR
-        - SUBJ
-        - MPQA
-        - SST2
-        - TREC
-        - MRPC
-        - SICK-E
-        - SCICITE
+        - [MR](https://aclanthology.org/P05-1015/), [CR](https://dl.acm.org/doi/10.1145/1014052.1014073), [SUBJ](https://aclanthology.org/P04-1035/), [MPQA](https://link.springer.com/article/10.1007/s10579-005-7880-9), [SST2](https://aclanthology.org/D13-1170/), [SST5](https://aclanthology.org/D13-1170/), [TREC](https://aclanthology.org/C02-1150/), [MRPC](https://aclanthology.org/C04-1051/), [SICK-E](https://aclanthology.org/L14-1314/), [SCICITE](https://arxiv.org/abs/1904.01608)
     - Semantic Textual Similarity (STS) Tasks
-        - STS 12 ~ 16
-        - STS-Benchmark
-        - STR
+        - STS 12 ~ 16, STS-Benchmark, [STR](https://arxiv.org/pdf/2110.04845.pdf)
 
 
 ## Environment Setup
