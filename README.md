@@ -4,6 +4,10 @@
   <img src="img/logo.png" width="600" height="auto" />
 </p>
 
+## Update
+
+- **Mar.20, 2022: Word Embedding Evaluation part is finished.**
+
 ## Outline
 
 <div align="center">
