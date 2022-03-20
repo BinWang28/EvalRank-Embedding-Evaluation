@@ -23,9 +23,5 @@ python src/run_sent_evaluation.py \
         --bow_we_path                   models/glove/glove.6B.50d.txt \
         --eval_type                     ranking,similarity,classification \
         --dist_metric                   cos \
-        --pos_pairs_type                ss,srs \
-        --ss_pos_ratio                  0.25 \
-        --srs_pos_ratio                 0.25 \
-        --background_sent_type          ss,srs
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

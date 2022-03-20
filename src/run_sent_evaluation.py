@@ -61,12 +61,12 @@ if __name__ == '__main__':
 
     # - - - - - - - - - - - - - - - - -
     # selection normalization mode
-    if config.dist_metric_ranking == 'cos':
+    if config.dist_metric == 'cos':
         config.normalization = True
-    elif config.dist_metric_ranking == 'l2':
+    elif config.dist_metric == 'l2':
         config.normalization = False
     else:
-        sys.exit("Distance Metric NOT SUPPORTED for ranking: {}".format(config.dist_metric_ranking))
+        sys.exit("Distance Metric NOT SUPPORTED for ranking: {}".format(config.dist_metric))
 
     # - - - - - - - - - - - - - - - - -
     # display parameters
