@@ -15,6 +15,7 @@
 import logging
 import copy
 
+from tqdm import tqdm
 import numpy as np
 
 from w_model import Word_embedding_model
@@ -43,7 +44,7 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
     sents_embs = []
     count      = 0
 
-    for sent in sent_list:
+    for sent in tqdm(sent_list):
         # skip if already computed
         if sent not in sent2id:
             sent2id[sent] = count

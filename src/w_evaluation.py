@@ -25,12 +25,11 @@ from scipy.stats.stats import kendalltau
 
 class Word_emb_evaluator:
     ''' run evaluation by similarity and ranking '''
-
     def __init__(self, config, word_pairs_data, word_emb_model) -> None:
         ''' define what tasks to perform in this module '''
-        
-        self.eval_by_similarity = 'similarity' in config.eval_type
+
         self.eval_by_ranking    = 'ranking' in config.eval_type
+        self.eval_by_similarity = 'similarity' in config.eval_type
         self.dist_metric        = config.dist_metric
 
         self.word_pairs_data = word_pairs_data
@@ -40,66 +39,23 @@ class Word_emb_evaluator:
     def eval(self):
         ''' main functions for this module '''
         
-        if self.eval_by_similarity:
-
-            logging.info('')
-            logging.info('*** Evaluation on word similarity tasks ***')
-            table_ws, res_ws = self.eval_for_similarity()
-            logging.info("\n"+str(table_ws))
-
         if self.eval_by_ranking:
 
             logging.info('')
             logging.info('*** Evaluation on word ranking tasks ***')
             table_rank, res_rank = self.eval_for_ranking()
             logging.info("\n"+str(table_rank))
-        
+
+        if self.eval_by_similarity:
+
+            logging.info('')
+            logging.info('*** Evaluation on word similarity tasks ***')
+            table_ws, res_ws = self.eval_for_similarity()
+            logging.info("\n"+str(table_ws))
+       
         return res_ws, res_rank
 
     
-    def eval_for_similarity(self):
-        ''' evaluate the embeddings on similarity task '''
-
-        results  = {}
-
-        for dataset_name, data_pairs in tqdm(self.word_pairs_data.ws_data.items(), leave=False): 
-            predicts = []
-            expected = []
-
-            for w1, w2, sc in data_pairs: 
-
-                w1_emb = self.word_emb_model.compute_embedding(w1)
-                w2_emb = self.word_emb_model.compute_embedding(w2)
-
-                if self.dist_metric == 'cos':
-                    predict  = w1_emb.dot(w2_emb.transpose())
-
-                elif self.dist_metric == 'l2':
-                    predict  = 1 / (np.linalg.norm(w1_emb - w2_emb) + 1) # note 1/(1+d)
-                    
-                else:
-                    sys.exit("Distance Metric NOT SUPPORTED: {}".format(self.dist_metric))
-                
-                predicts.append(predict)                
-                expected.append(sc)
-            
-            pearsonr_res  = pearsonr(predicts, expected)[0]
-            spearmanr_res = spearmanr(predicts, expected)[0]
-            kendall_res   = kendalltau(predicts, expected)[0]
-
-            results[dataset_name] = {'Pearsaon Corr': pearsonr_res,
-                                     'Spearman Corr': spearmanr_res,
-                                     'Kendall Corr' : kendall_res}
-        
-        table = PrettyTable(['Index', 'METHOD', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
-        count = 1
-        for dataset, resu in results.items():
-            table.add_row([count, 'Emb', dataset, resu['Pearsaon Corr'], resu['Spearman Corr'], resu['Kendall Corr']])
-            count += 1
-        
-        return table, results
-
-
     def eval_for_ranking(self):
         ''' evaluate the embeddings on ranking task '''
 
@@ -157,3 +113,46 @@ class Word_emb_evaluator:
                 table.add_row(['Hits@'+str(i+1), res_rank['hits_'+str(i+1)]])
 
         return table, res_rank
+
+
+    def eval_for_similarity(self):
+        ''' evaluate the embeddings on similarity task '''
+
+        results  = {}
+
+        for dataset_name, data_pairs in tqdm(self.word_pairs_data.ws_data.items(), leave=False): 
+            predicts = []
+            expected = []
+
+            for w1, w2, sc in data_pairs: 
+
+                w1_emb = self.word_emb_model.compute_embedding(w1)
+                w2_emb = self.word_emb_model.compute_embedding(w2)
+
+                if self.dist_metric == 'cos':
+                    predict  = w1_emb.dot(w2_emb.transpose())
+
+                elif self.dist_metric == 'l2':
+                    predict  = 1 / (np.linalg.norm(w1_emb - w2_emb) + 1) # note 1/(1+d)
+                    
+                else:
+                    sys.exit("Distance Metric NOT SUPPORTED: {}".format(self.dist_metric))
+                
+                predicts.append(predict)                
+                expected.append(sc)
+            
+            pearsonr_res  = pearsonr(predicts, expected)[0]
+            spearmanr_res = spearmanr(predicts, expected)[0]
+            kendall_res   = kendalltau(predicts, expected)[0]
+
+            results[dataset_name] = {'Pearsaon Corr': pearsonr_res,
+                                     'Spearman Corr': spearmanr_res,
+                                     'Kendall Corr' : kendall_res}
+        
+        table = PrettyTable(['Index', 'METHOD', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
+        count = 1
+        for dataset, resu in results.items():
+            table.add_row([count, 'Emb', dataset, resu['Pearsaon Corr'], resu['Spearman Corr'], resu['Kendall Corr']])
+            count += 1
+        
+        return table, results

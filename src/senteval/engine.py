@@ -14,7 +14,6 @@ from __future__ import absolute_import, division, unicode_literals
 
 from senteval import utils
 from senteval.binary import CREval, MREval, MPQAEval, SUBJEval
-from senteval.snli import SNLIEval
 from senteval.trec import TRECEval
 from senteval.sick import SICKRelatednessEval, SICKEntailmentEval
 from senteval.mrpc import MRPCEval
@@ -48,8 +47,7 @@ class SE(object):
 
         self.list_tasks = ['SCICITE', 'CR', 'MR', 'MPQA', 'SUBJ', 'SST2', 'SST5', 'TREC', 'MRPC',
                            'SICKRelatedness', 'SICKEntailment', 'STSBenchmark',
-                           'SNLI', 'STS12', 'STS13',
-                           'STS14', 'STS15', 'STS16', 'STR',
+                           'STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STR',
                            'Length', 'WordContent', 'Depth', 'TopConstituents',
                            'BigramShift', 'Tense', 'SubjNumber', 'ObjNumber',
                            'OddManOut', 'CoordinationInversion']
@@ -83,18 +81,16 @@ class SE(object):
         elif name == 'MRPC':
             self.evaluation = MRPCEval(tpath + 'sent_classification/MRPC', seed=self.params.seed)
         elif name == 'SICKRelatedness':
-            self.evaluation = SICKRelatednessEval(tpath + 'sent_sim/SICK', seed=self.params.seed)
+            self.evaluation = SICKRelatednessEval(tpath + 'sent_similarity/SICK', seed=self.params.seed)
         elif name == 'STSBenchmark':
-            self.evaluation = STSBenchmarkEval(tpath + 'sent_sim/STS/STSBenchmark', seed=self.params.seed)
+            self.evaluation = STSBenchmarkEval(tpath + 'sent_similarity/STS/STSBenchmark', seed=self.params.seed)
         elif name == 'SICKEntailment':
             self.evaluation = SICKEntailmentEval(tpath + 'sent_classification/SICK', seed=self.params.seed)
-        elif name == 'SNLI':
-            self.evaluation = SNLIEval(tpath + 'sent_classification/SNLI', seed=self.params.seed)
         elif name in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:
             fpath = name + '-en-test'
-            self.evaluation = eval(name + 'Eval')(tpath + 'sent_sim/STS/' + fpath, seed=self.params.seed)
+            self.evaluation = eval(name + 'Eval')(tpath + 'sent_similarity/STS/' + fpath, seed=self.params.seed)
         elif name == 'STR':
-            self.evaluation = STREval(tpath + 'sent_sim/', seed=self.params.seed)
+            self.evaluation = STREval(tpath + 'sent_similarity/STR/', seed=self.params.seed)
 
         # Probing Tasks
         elif name == 'Length':

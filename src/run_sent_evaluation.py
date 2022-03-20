@@ -21,7 +21,7 @@ import s_data_loader
 import s_models
 import s_evaluation
 
-logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.DEBUG)
 
 if __name__ == '__main__':
     ''' this is the main file for sentence embedding evaluation '''

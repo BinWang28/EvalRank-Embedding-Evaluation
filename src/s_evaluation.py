@@ -22,6 +22,12 @@ from prettytable import PrettyTable
 import senteval
 
 
+# Set params for SentEval
+params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
+params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
+                                'tenacity': 3, 'epoch_size': 2}
+
+
 class Sent_emb_evaluator:
     ''' run evaluation by similarity and ranking '''
 
@@ -47,28 +53,30 @@ class Sent_emb_evaluator:
 
         if self.eval_by_ranking:
             logging.info('')
-            logging.info('*** Evaluation on ranking task ***')
+            logging.info('*** Evaluation on sentence ranking task ***')
             res_rank = self.eval_for_ranking()
 
         if self.eval_by_similarity:
+            import senteval
             logging.info('')
-            logging.info('*** Evaluation on similarity tasks ***')
+            logging.info('*** Evaluation on sentence similarity tasks ***')
             sent_sim = self.eval_for_similarity()
 
         if self.eval_by_classification:
+            import senteval
             logging.info('')
-            logging.info('*** Evaluation classification tasks ***')
+            logging.info('*** Evaluation sentence classification tasks ***')
             res_cls = self.eval_for_classification()
         
         return sent_sim, res_rank, res_cls
         
-
+    '''
     def prepare(self, params, samples):
-        ''' batcher for preparation '''
+        # batcher for preparation
 
         samples = [' '.join(sent) if sent != [] else '.' for sent in samples]
         self.sent_emb_model.embedder_all(samples)
-
+    '''
 
     def prepare_nonorm(self, params, samples):
         ''' batcher for preparation '''        
@@ -93,6 +101,7 @@ class Sent_emb_evaluator:
         res_rank       = None
         
         # pre-compute all embeddings
+        logging.info("Pre-compute all embeddings")
         self.sent_emb_model.embedder_all(self.sent_pairs_data.all_sents, normalization=self.config.normalization, centralization=True)
 
         # embedding
@@ -106,14 +115,12 @@ class Sent_emb_evaluator:
             s2_emb  = self.sent_emb_model.embed([s2])
 
             if self.config.dist_metric == 'cos':
-
                 pos_score         = np.dot(s1_emb, s2_emb.T).squeeze()
                 background_scores = np.dot(sents_embs, s1_emb.T)
                 background_scores = np.squeeze(background_scores)
                 background_scores = np.sort(background_scores)[::-1]
 
             elif self.config.dist_metric == 'l2':
-
                 pos_score         = 1 / (np.linalg.norm(s1_emb - s2_emb) + 1)
                 background_scores = 1 / (np.linalg.norm((sents_embs - s1_emb),axis=1) + 1)
                 background_scores = np.sort(background_scores)[::-1]
@@ -153,11 +160,6 @@ class Sent_emb_evaluator:
         
         transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark', 'SICKRelatedness', 'STR']
 
-        # Set params for SentEval
-        params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
-        params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
-                                        'tenacity': 3, 'epoch_size': 2}
-
         se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
         results = se.eval(transfer_tasks)
 
@@ -185,9 +187,9 @@ class Sent_emb_evaluator:
         transfer_tasks = ['SCICITE', 'MR', 'CR', 'MPQA', 'SUBJ', 'SST2', 'SST5', 'TREC', 'MRPC', 'SICKEntailment']
 
         # Set params for SentEval
-        params_senteval = {'task_path': './datasets/', 'usepytorch': True, 'kfold': 5}
-        params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
-                                        'tenacity': 3, 'epoch_size': 2}
+        #params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
+        #params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
+        #                                'tenacity': 3, 'epoch_size': 2}
 
         # evaluation for original embedding and report result
         se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
