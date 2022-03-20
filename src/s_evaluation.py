@@ -50,8 +50,6 @@ class Sent_emb_evaluator:
             logging.info('*** Evaluation on ranking task ***')
             res_rank = self.eval_for_ranking()
 
-            import pdb; pdb.set_trace()
-
         if self.eval_by_similarity:
             logging.info('')
             logging.info('*** Evaluation on similarity tasks ***')
@@ -69,14 +67,14 @@ class Sent_emb_evaluator:
         ''' batcher for preparation '''
 
         samples = [' '.join(sent) if sent != [] else '.' for sent in samples]
-        self.sent_emb_model.embedder_all(samples, post_process=params['post_process'])
+        self.sent_emb_model.embedder_all(samples)
 
 
     def prepare_nonorm(self, params, samples):
         ''' batcher for preparation '''        
 
         samples = [' '.join(sent) if sent != [] else '.' for sent in samples]
-        self.sent_emb_model.embedder_all(samples, normalization=False, post_process=params['post_process'])
+        self.sent_emb_model.embedder_all(samples, normalization=False)
 
 
     def batcher(self, params, batch):
@@ -149,66 +147,40 @@ class Sent_emb_evaluator:
         
 
     def eval_for_similarity(self):
-        '''
-            perform evaluation on similarity tasks
-        '''
+        ''' perform evaluation on similarity tasks '''
 
-        sent_sim_ori, sent_sim_post = None, None
-
+        sent_sim = None
+        
         transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark', 'SICKRelatedness', 'STR']
 
         # Set params for SentEval
-        params_senteval = {'task_path': './datasets/', 'usepytorch': True, 'kfold': 5}
+        params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
         params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
                                         'tenacity': 3, 'epoch_size': 2}
 
-        if 'ori' in self.config.model_mode:
+        se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
+        results = se.eval(transfer_tasks)
 
-            # run evaluation for original sentence embedding
-            logging.info("On the original sentence embedding")
-            params_senteval['post_process'] = False
-            se = senteval.engine.SE(params_senteval, self.batcher_ori, self.prepare_nonorm)
-            results = se.eval(transfer_tasks)
+        # report result
+        table = PrettyTable(['Embs', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
+        for dataset, values in results.items():
+            if dataset in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:
+                table.add_row([self.config.sent_emb_model, dataset+'_ALL', results[dataset]['all']['pearson']['wmean'], results[dataset]['all']['spearman']['wmean'], results[dataset]['all']['kendall']['wmean']])
+            elif dataset in ['STSBenchmark', 'SICKRelatedness', 'STR']:
+                table.add_row([self.config.sent_emb_model, dataset, results[dataset]['pearson'], results[dataset]['spearman'], results[dataset]['kendall']])
+        sent_sim = results
 
-            # report result
-            table1 = PrettyTable(['Embs', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
-            for dataset, values in results.items():
-                if dataset in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:
-                    table1.add_row([self.config.sent_emb_model, dataset+'_ALL', results[dataset]['all']['pearson']['wmean'], results[dataset]['all']['spearman']['wmean'], results[dataset]['all']['kendall']['wmean']])
-                elif dataset in ['STSBenchmark', 'SICKRelatedness', 'STR']:
-                    table1.add_row([self.config.sent_emb_model, dataset, results[dataset]['pearson'], results[dataset]['spearman'], results[dataset]['kendall']])
-            sent_sim_ori = results
+        logging.info('Experimental results on similarity for original sentence embeddings')
+        logging.info("\n"+str(table))
 
-            logging.info('Experimental results on similarity for original sentence embeddings')
-            logging.info("\n"+str(table1))
-
-        if 'post' in self.config.model_mode:
-            # run evaluation on post-process sentence embedding
-            logging.info("On the post-processed sentence embedding")
-            params_senteval['post_process'] = True
-            se = senteval.engine.SE(params_senteval, self.batcher_post, self.prepare_nonorm)
-            results = se.eval(transfer_tasks)
-
-            # report result
-            table2 = PrettyTable(['Embs', 'DATASET', 'Pearson', 'Spearman', 'Kendall'])
-            for dataset, values in results.items():
-                if dataset in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:
-                    table2.add_row([self.config.sent_emb_model+'_post', dataset+'_ALL', results[dataset]['all']['pearson']['wmean'], results[dataset]['all']['spearman']['wmean'], results[dataset]['all']['kendall']['wmean']])
-                elif dataset in ['STSBenchmark', 'SICKRelatedness', 'STR']:
-                    table2.add_row([self.config.sent_emb_model+'_post', dataset, results[dataset]['pearson'], results[dataset]['spearman'], results[dataset]['kendall']])
-            sent_sim_post = results
-
-            logging.info('Experimental results on similarity for post-processed sentence embeddings')
-            logging.info("\n"+str(table2))
-
-        return sent_sim_ori, sent_sim_post
+        return sent_sim
         
 
     def eval_for_classification(self):
         '''
             evaluate the sentence embedding with classificaition / downstream tasks
         '''
-        results_ori, results_post = None, None
+        results = None
 
         transfer_tasks = ['SCICITE', 'MR', 'CR', 'MPQA', 'SUBJ', 'SST2', 'SST5', 'TREC', 'MRPC', 'SICKEntailment']
 
@@ -217,33 +189,16 @@ class Sent_emb_evaluator:
         params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
                                         'tenacity': 3, 'epoch_size': 2}
 
-        if 'ori' in self.config.model_mode:
-            # evaluation for original embedding and report result
-            logging.info("On the original sentence embedding")
-            params_senteval['post_process'] = False
-            se1 = senteval.engine.SE(params_senteval, self.batcher_ori, self.prepare_nonorm)
-            results_ori = se1.eval(transfer_tasks)
+        # evaluation for original embedding and report result
+        se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
+        results = se.eval(transfer_tasks)
 
-            # results
-            logging.info("Classification results on original sentence embedding")
-            table1 = PrettyTable(['Dataset', 'Ori SentEmb'])
-            for dataset in transfer_tasks:
-                table1.add_row([dataset, results_ori[dataset]['acc']])
-            logging.info("\n"+str(table1))
+        # results
+        logging.info("Classification results on sentence embedding")
+        table = PrettyTable(['Dataset', 'SentEmb'])
+        for dataset in transfer_tasks:
+            table.add_row([dataset, results[dataset]['acc']])
+        logging.info("\n"+str(table))
 
-        if 'post' in self.config.model_mode:
-            # evaluation for post-processed embedding and report result
-            logging.info("On the post-processed sentence embedding")
-            params_senteval['post_process'] = True
-            se2 = senteval.engine.SE(params_senteval, self.batcher_post, self.prepare_nonorm)
-            results_post = se2.eval(transfer_tasks)
-
-            # results
-            logging.info("Classification results on post-processed sentence embedding")
-            table2 = PrettyTable(['Dataset', 'Post SentEmb'])
-            for dataset in transfer_tasks:
-                table2.add_row([dataset, results_post[dataset]['acc']])
-            logging.info("\n"+str(table2))
-
-        return results_ori, results_post
+        return results
 

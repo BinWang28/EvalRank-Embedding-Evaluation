@@ -50,14 +50,15 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
             count += 1
         else:
             continue
+
         # skip words not in vocab
         # use zero vector for unknown sents
         sent_split = sent.lower().split()
-        sentvec = []
 
+        sentvec = []
         for word in sent_split:
             if word in self.our_word_emb_model.vocab:
-                sentvec.append(self.our_word_emb_model.compute_embedding(word)[0])
+                sentvec.append(self.our_word_emb_model.compute_embedding(word))
             else:
                 continue
         
@@ -68,9 +69,7 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
             
         sentvec = np.mean(sentvec, 0)
         sents_embs.append(sentvec)
-
-    import pdb; pdb.set_trace()
-    
+   
     sents_embs = np.stack(sents_embs)
 
     self.sent2id    = sent2id
