@@ -18,8 +18,8 @@ import logging
 import argparse
 
 import s_data_loader
-#import s_models
-#import s_evaluation
+import s_models
+import s_evaluation
 
 logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.INFO)
 
@@ -82,12 +82,10 @@ if __name__ == '__main__':
     else:
         sent_pairs_data = None
 
-
-
-    import pdb; pdb.set_trace()
-
-    #sent_emb_model = models.Sent_embedding_model(config)
+    # load model
+    sent_emb_model = s_models.Sent_embedding_model(config)
     
-    #our_evaluator = evaluation.Sent_emb_evaluator(config, sent_pairs_data, sent_emb_model)
-    #sim_ori, sim_post, rank_ori, rank_post, clas_ori, clas_post = our_evaluator.eval()
+    # eval
+    our_evaluator = s_evaluation.Sent_emb_evaluator(config, sent_pairs_data, sent_emb_model)
+    our_evaluator.eval()
 

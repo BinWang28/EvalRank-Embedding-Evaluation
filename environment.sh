@@ -18,4 +18,8 @@ conda install -c conda-forge tqdm --yes
 conda install -c conda-forge prettytable --yes
 
 
+# proper pytorch environment
 
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch --yes
+
+conda install -c conda-forge python-dateutil

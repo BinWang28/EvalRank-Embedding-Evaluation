@@ -19,9 +19,9 @@ POST_PROCESS='False' # 'True', 'False'
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 python src/run_sent_evaluation.py \
-        --sent_emb_model                bow \
-        --bow_we_path                   models/glove/glove.6B.50d.txt \
-        --eval_type                     ranking,similarity,classification \
-        --dist_metric                   cos \
+        --sent_emb_model                $SENT_EMB_MODEL \
+        --bow_we_path                   $BOW_WE_PATH \
+        --eval_type                     $EVAL_TYPE \
+        --dist_metric                   $DIST_METRIC
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

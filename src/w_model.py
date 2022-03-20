@@ -18,7 +18,6 @@ import logging
 import numpy as np
 from sklearn.decomposition import PCA
 
-
 class Word_embedding_model:
     ''' wrapper for word embedding models '''
 

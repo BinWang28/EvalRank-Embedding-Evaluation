@@ -70,6 +70,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Any word embedding files follow the [THIS FORMAT](./src/models/word_emb/).
     - Integrate one post-processing method.
 - Sentence Embeddings
+    - Bag-of-Word (averaging word embedding), 
     - TODO: BERT, SBERT, BERT-flow, BERT-whitening, xxx
 
 ## Quick User Guide
