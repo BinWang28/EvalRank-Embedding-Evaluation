@@ -9,10 +9,11 @@ echo " "
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-WORD_EMB_PATH='models/word_emb/toy_emb.txt' # 'models/word_emb/glove.840B.300d.txt'
-EVAL_TYPE='ranking,similarity' # 'similarity', 'ranking'
-DIST_METRIC='cos' # 'cos', 'l2'
-BG_VOCAB='basic,wiki' # 'basic', 'wiki'
+SENT_EMB_MODEL='bow'
+BOW_WE_PATH='src/models/toy_emb.txt'
+BOW_WE_PATH='/data07/binwang/research/EvalRank/models/glove/glove.6B.50d.txt'
+EVAL_TYPE='ranking,similarity,classification'
+DIST_METRIC='cos'
 POST_PROCESS='False' # 'True', 'False'
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
