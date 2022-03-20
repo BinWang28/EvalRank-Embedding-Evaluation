@@ -27,12 +27,14 @@ params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
 params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
                                 'tenacity': 3, 'epoch_size': 2}
 
+
 '''
 # Set params for SentEval (for better performance)
 params_senteval.update({'task_path': PATH_TO_DATA, 'usepytorch': True, 'kfold': 10})
 params_senteval['classifier'] = {'nhid': 50, 'optim': 'adam', 'batch_size': 64,
                                  'tenacity': 5, 'epoch_size': 4}
 '''
+
 
 class Sent_emb_evaluator:
     ''' run evaluation by similarity and ranking '''
@@ -75,14 +77,7 @@ class Sent_emb_evaluator:
             res_cls = self.eval_for_classification()
         
         return sent_sim, res_rank, res_cls
-        
-    '''
-    def prepare(self, params, samples):
-        # batcher for preparation
 
-        samples = [' '.join(sent) if sent != [] else '.' for sent in samples]
-        self.sent_emb_model.embedder_all(samples)
-    '''
 
     def prepare_nonorm(self, params, samples):
         ''' batcher for preparation '''        
