@@ -10,7 +10,7 @@ echo " "
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 WORD_EMB_PATH='models/word_emb/toy_emb.txt' # 'models/word_emb/glove.840B.300d.txt'
-EVAL_TYPE='similarity,ranking' # 'similarity', 'ranking'
+EVAL_TYPE='ranking,similarity' # 'similarity', 'ranking'
 DIST_METRIC='cos' # 'cos', 'l2'
 BG_VOCAB='basic,wiki' # 'basic', 'wiki'
 POST_PROCESS='False' # 'True', 'False'
