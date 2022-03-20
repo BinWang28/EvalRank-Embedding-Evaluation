@@ -21,8 +21,6 @@ POST_PROCESS='False' # 'True', 'False'
 python src/run_sent_evaluation.py \
         --sent_emb_model                bow \
         --bow_we_path                   models/glove/glove.6B.50d.txt \
-        --model_mode                    ori \
-        --model_index                   1 \
         --eval_type                     ranking,similarity,classification \
         --dist_metric                   cos \
         --pos_pairs_type                ss,srs \
