@@ -15,9 +15,9 @@ from __future__ import absolute_import, division, unicode_literals
 from senteval import utils
 from senteval.binary import CREval, MREval, MPQAEval, SUBJEval
 from senteval.trec import TRECEval
-from senteval.sick import SICKRelatednessEval, SICKEntailmentEval
+from senteval.sick import SICKRelatednessEval, SICKEntailmentEval, SICKRelatednessEval_Supervised
 from senteval.mrpc import MRPCEval
-from senteval.sts import STS12Eval, STS13Eval, STS14Eval, STS15Eval, STS16Eval, STSBenchmarkEval
+from senteval.sts import STS12Eval, STS13Eval, STS14Eval, STS15Eval, STS16Eval, STSBenchmarkEval, STSBenchmarkEval_Supervised
 from senteval.str import STREval
 from senteval.sst import SSTEval
 from senteval.scicite import SCICITEEval
@@ -47,6 +47,7 @@ class SE(object):
 
         self.list_tasks = ['SCICITE', 'CR', 'MR', 'MPQA', 'SUBJ', 'SST2', 'SST5', 'TREC', 'MRPC',
                            'SICKRelatedness', 'SICKEntailment', 'STSBenchmark',
+                           'SICKRelatedness_Supervised', 'STSB_Supervised',
                            'STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STR',
                            'Length', 'WordContent', 'Depth', 'TopConstituents',
                            'BigramShift', 'Tense', 'SubjNumber', 'ObjNumber',
@@ -82,8 +83,12 @@ class SE(object):
             self.evaluation = MRPCEval(tpath + 'sent_classification/MRPC', seed=self.params.seed)
         elif name == 'SICKRelatedness':
             self.evaluation = SICKRelatednessEval(tpath + 'sent_similarity/SICK', seed=self.params.seed)
+        elif name == 'SICKRelatedness_Supervised':
+            self.evaluation = SICKRelatednessEval_Supervised(tpath + 'sent_similarity/SICK', seed=self.params.seed)
         elif name == 'STSBenchmark':
             self.evaluation = STSBenchmarkEval(tpath + 'sent_similarity/STS/STSBenchmark', seed=self.params.seed)
+        elif name == 'STSB_Supervised':
+            self.evaluation = STSBenchmarkEval_Supervised(tpath + 'sent_similarity/STS/STSBenchmark', seed=self.params.seed)
         elif name == 'SICKEntailment':
             self.evaluation = SICKEntailmentEval(tpath + 'sent_classification/SICK', seed=self.params.seed)
         elif name in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:

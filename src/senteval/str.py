@@ -75,7 +75,7 @@ class STREval(object):
                     'kendall': kendalltau(sys_scores, gs_scores)[0],
                     'nsamples': len(sys_scores)}
 
-        logging.debug('pearson = %.4f, spearman = %.4f, kendall = %.4f' %
+        logging.debug('pearson = %.4f, spearman = %.4f, kendall = %.4f \n' %
                         (
                         results['pearson'],
                         results['spearman'],

@@ -23,9 +23,9 @@ from senteval.tools.validation import SplitClassifier
 
 from senteval.utils import cosine, inner, euclidean, manhattan
 
-class SICKRelatednessEval_old(object):
+class SICKRelatednessEval_Supervised(object):
     def __init__(self, task_path, seed=1111):
-        logging.info('Transfer task: SICK-Relatedness')
+        logging.info('Transfer task: SICK-Relatedness Supervised')
         self.seed = seed
         train = self.loadFile(os.path.join(task_path, 'SICK_train.txt'))
         dev = self.loadFile(os.path.join(task_path, 'SICK_trial.txt'))
@@ -118,8 +118,7 @@ class SICKRelatednessEval_old(object):
         ke = 0 if ke != ke else ke
         se = mean_squared_error(yhat, self.sick_data['test']['y'])
         logging.debug('Dev : Pearson {0}'.format(devpr))
-        logging.debug('Test : Pearson {0} Spearman {1} Kendall {2} MSE {3} \
-                       for SICK Relatedness\n'.format(pr, sr, ke, se))
+        logging.debug('Test : Pearson {0} Spearman {1} Kendall {2} MSE {3} \n'.format(pr, sr, ke, se))
 
         return {'devpearson': devpr, 'pearson': pr, 'spearman': sr, 'kendall': ke, 'mse': se,
                 'yhat': yhat, 'ndev': len(devA), 'ntest': len(testA)}
@@ -218,8 +217,7 @@ class SICKRelatednessEval(object):
         sr = 0 if sr != sr else sr
         ke = 0 if ke != ke else ke
         se = mean_squared_error(yhat, self.sick_data['test']['y'])
-        logging.debug('Test : Pearson {0} Spearman {1} Kendall {2} MSE {3} \
-                       for SICK Relatedness\n'.format(pr, sr, ke, se))
+        logging.debug('Test : Pearson {0} Spearman {1} Kendall {2} MSE {3} \n'.format(pr, sr, ke, se))
 
         return {'pearson': pr, 'spearman': sr, 'kendall': ke, 'mse': se,
                 'yhat': yhat, 'ntest': len(testA)}

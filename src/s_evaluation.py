@@ -22,11 +22,17 @@ from prettytable import PrettyTable
 import senteval
 
 
-# Set params for SentEval
+# Set params for SentEval (for fast prototyping)
 params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
 params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
                                 'tenacity': 3, 'epoch_size': 2}
 
+'''
+# Set params for SentEval (for better performance)
+params_senteval.update({'task_path': PATH_TO_DATA, 'usepytorch': True, 'kfold': 10})
+params_senteval['classifier'] = {'nhid': 50, 'optim': 'adam', 'batch_size': 64,
+                                 'tenacity': 5, 'epoch_size': 4}
+'''
 
 class Sent_emb_evaluator:
     ''' run evaluation by similarity and ranking '''
@@ -158,7 +164,7 @@ class Sent_emb_evaluator:
 
         sent_sim = None
         
-        transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark', 'SICKRelatedness', 'STR']
+        transfer_tasks = ['STS12', 'STS13', 'STS14', 'STS15', 'STS16', 'STSBenchmark', 'SICKRelatedness', 'STR', 'STSB_Supervised', 'SICKRelatedness_Supervised']
 
         se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
         results = se.eval(transfer_tasks)
@@ -168,7 +174,7 @@ class Sent_emb_evaluator:
         for dataset, values in results.items():
             if dataset in ['STS12', 'STS13', 'STS14', 'STS15', 'STS16']:
                 table.add_row([self.config.sent_emb_model, dataset+'_ALL', results[dataset]['all']['pearson']['wmean'], results[dataset]['all']['spearman']['wmean'], results[dataset]['all']['kendall']['wmean']])
-            elif dataset in ['STSBenchmark', 'SICKRelatedness', 'STR']:
+            elif dataset in ['STSBenchmark', 'SICKRelatedness', 'STR', 'STSB_Supervised', 'SICKRelatedness_Supervised']:
                 table.add_row([self.config.sent_emb_model, dataset, results[dataset]['pearson'], results[dataset]['spearman'], results[dataset]['kendall']])
         sent_sim = results
 
@@ -185,11 +191,6 @@ class Sent_emb_evaluator:
         results = None
 
         transfer_tasks = ['SCICITE', 'MR', 'CR', 'MPQA', 'SUBJ', 'SST2', 'SST5', 'TREC', 'MRPC', 'SICKEntailment']
-
-        # Set params for SentEval
-        #params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
-        #params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
-        #                                'tenacity': 3, 'epoch_size': 2}
 
         # evaluation for original embedding and report result
         se = senteval.engine.SE(params_senteval, self.batcher, self.prepare_nonorm)
