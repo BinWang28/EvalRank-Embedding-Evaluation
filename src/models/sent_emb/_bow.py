@@ -44,7 +44,7 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
     sents_embs = []
     count      = 0
 
-    for sent in tqdm(sent_list):
+    for sent in tqdm(sent_list, leave=False):
         # skip if already computed
         if sent not in sent2id:
             sent2id[sent] = count

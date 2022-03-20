@@ -172,7 +172,7 @@ class Sent_emb_evaluator:
                 table.add_row([self.config.sent_emb_model, dataset, results[dataset]['pearson'], results[dataset]['spearman'], results[dataset]['kendall']])
         sent_sim = results
 
-        logging.info('Experimental results on similarity for original sentence embeddings')
+        logging.info('Experimental results on similarity for original sentence embeddings (weighted-average)')
         logging.info("\n"+str(table))
 
         return sent_sim
