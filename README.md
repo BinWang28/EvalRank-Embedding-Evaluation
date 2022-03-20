@@ -79,7 +79,7 @@ bash word_evaluate.sh
 - **Sentence Level Similarity and EvalRank**
 
 ```
-bash xx.sh
+bash sentence_evaluate.sh
 ```
 
 ## Benchmarking - Word
