@@ -12,9 +12,8 @@ echo " "
 SENT_EMB_MODEL='bow'
 BOW_WE_PATH='src/models/toy_emb.txt'
 BOW_WE_PATH='/data07/binwang/research/EvalRank/models/glove/glove.6B.50d.txt'
-EVAL_TYPE='similarity,classification' # ranking,similarity,classification
-DIST_METRIC='cos'
-POST_PROCESS='False' # 'True', 'False'
+EVAL_TYPE='ranking,similarity,classification' # ranking,similarity,classification
+DIST_METRIC='cos' # only for ranking
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
