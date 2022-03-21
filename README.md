@@ -86,6 +86,9 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
     ```
     bash word_evaluate.sh
+
+    # To evaluate on your own word embedding model
+    update file: word_evaluate.sh
     WORD_EMB_PATH='PATH/TO/WORD/EMBEDDING'
     ```   
 
