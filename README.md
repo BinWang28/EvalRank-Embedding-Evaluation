@@ -115,6 +115,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     ```
 
     For better classification performance (in file src/s_evaluation.py):
+    
     change
     ```
     params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
