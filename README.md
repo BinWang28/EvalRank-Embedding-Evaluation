@@ -84,9 +84,9 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 - **Word Level Similarity and EvalRank**
     - To test on your own model, simply change the word embedding path.
 
-```
-bash word_evaluate.sh
-```   
+    ```
+    bash word_evaluate.sh
+    ```   
 
 - **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding)
