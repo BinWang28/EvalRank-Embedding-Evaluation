@@ -9,7 +9,7 @@
 - **Mar.21, 2022**
     - Follow the template to test on your own embedding model.
 - **Mar.21, 2022**
-    - Support a series of sentence embedding models including InferSent, SimCSE, Sentence_BERT, BERT-Whitening, BERT-Flow.
+    - Support a series of sentence embedding models including [InferSent, SimCSE, Sentence_BERT, BERT-Whitening, BERT-Flow](src/models/sent_emb/).
     - Sentence Embedding Evaluation part is finished.
 - **Mar.20, 2022**
     - Word Embedding Evaluation part is finished.
