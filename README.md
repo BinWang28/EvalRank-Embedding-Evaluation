@@ -129,6 +129,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
                                     'tenacity': 5, 'epoch_size': 4}
     ```
 
+**For a complete set of evaluation performance, refer to the bash and log files in scripts/**
 
 ## Benchmarking - Word
 
