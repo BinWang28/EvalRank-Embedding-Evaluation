@@ -41,7 +41,7 @@ If you find our package useful, please cite our paper.
 ```
     - Will update the ACL proceeding once it is out.
 
-## Introduction
+### Introduction
 
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 
@@ -56,13 +56,13 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
     - Semantic Textual Similarity (STS) Tasks
         - STS 12~16, STS-Benchmark, [STR](https://arxiv.org/pdf/2110.04845.pdf)
 
-## Environment Setup
+### Environment Setup
 
 Please lookinto the details of the following script file for setting up the environment.
 
     bash environment.sh
 
-## Supported Architectures 
+### Supported Architectures 
 
 We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
 
@@ -73,7 +73,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Bag-of-Word (averaging word embedding), 
     - TODO: BERT, SBERT, BERT-flow, BERT-whitening, xxx
 
-## Quick User Guide
+### Quick User Guide
 
 - **Word Level Similarity and EvalRank**
 
@@ -87,7 +87,7 @@ bash word_evaluate.sh
 bash sentence_evaluate.sh
 ```
 
-## Benchmarking - Word
+### Benchmarking - Word
 
 
 | Word Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
@@ -102,12 +102,12 @@ bash sentence_evaluate.sh
 - More benchmarking results can be found in this page: [word_evalrank](./benchmarking/word_evalrank.md), [word_similarity](./benchmarking/word_similarity.md).
 
 
-## Benchmarking - Sentence
+### Benchmarking - Sentence
 
 TODO: table for benchmarking results
 
 
-## Acknowledge
+### Acknowledge
 
 - We borrow a big portion of sentence embedding evaluation from [SentEval](https://github.com/facebookresearch/SentEval). Please consider cite their work if you found that part useful.
 
