@@ -91,6 +91,8 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Sentence-BERT
     - SimCSE
 
+You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
+
 ## Quick User Guide
 
 - **Word Level Similarity and EvalRank**
