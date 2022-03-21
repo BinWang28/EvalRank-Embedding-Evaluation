@@ -23,8 +23,7 @@
 | [Reference](#Reference)											| Reference                    	    |
 | [Introduction](#Introduction)          							| Overview                 		    |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
-| [Supported Architectures](#Supported-Architectures) 				| Example Architectures    		    |
-| [Quick User Guide](#Quick-User-Guide)							    | Scripts                 		    |
+| [Supported Architectures](#Supported-Architectures) 				| Architectures and Quick Start     |
 | [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
 | [Benchmarking - Sentence](#Benchmarking---Sentence)				| Leaderboard              		    |
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
@@ -82,14 +81,12 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Any word embedding files follow this [format](./src/models/word_emb/).
     - Integrate one post-processing method.
 
-    - **Word Level Similarity and EvalRank**
+- **Word Level Similarity and EvalRank**
 
-    ```
-    bash word_evaluate.sh
-    ```
-    
-    To test on your own model, simply change the word embedding path.
-
+```
+bash word_evaluate.sh
+```   
+To test on your own model, simply change the word embedding path.
 
 - **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding)
@@ -101,19 +98,15 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Sentence-BERT
     - SimCSE
 
-You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
-
-#### Quick User Guide
-
-
-
-To test on your own model, simply change the word embedding path.
-
 - **Sentence Level Similarity and EvalRank**
 
 ```
 bash sentence_evaluate.sh
 ```
+
+You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
+
+
 
 ## Benchmarking - Word
 
