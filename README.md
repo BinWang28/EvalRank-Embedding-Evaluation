@@ -75,10 +75,10 @@ Please lookinto the details of the following script file for setting up the envi
 
 We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
 
-- Word Embeddings
+- **Word Embedding Models**
     - Any word embedding files follow the [THIS FORMAT](./src/models/word_emb/).
     - Integrate one post-processing method.
-- Sentence Embeddings
+- **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding), Bag-of-word with post-processing, InferSent, BERT
     - BERT-Whitening, BERT-Flow, Sentence-BERT, SimCSE
 
