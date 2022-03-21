@@ -4,7 +4,7 @@
   <img src="img/logo.png" width="600" height="auto" />
 </p>
 
-#### Update
+### Update
 
 - **Mar.20, 2022: Word Embedding Evaluation part is finished.**
 
@@ -25,7 +25,7 @@
 
 </div>
 
-## Reference
+### Reference
 
 If you find our package useful, please cite our paper.
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
