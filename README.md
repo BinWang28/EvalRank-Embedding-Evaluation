@@ -30,7 +30,7 @@
 
 </div>
 
-### Reference
+### References
 
 If you find our package useful, please cite our paper.
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
@@ -86,6 +86,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
     ```
     bash word_evaluate.sh
+    WORD_EMB_PATH='PATH/TO/WORD/EMBEDDING'
     ```   
 
 - **Sentence Embedding Models**
