@@ -82,11 +82,11 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Integrate one post-processing method.
 
 - **Word Level Similarity and EvalRank**
+    - To test on your own model, simply change the word embedding path.
 
 ```
 bash word_evaluate.sh
 ```   
-    - To test on your own model, simply change the word embedding path.
 
 - **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding)
@@ -99,13 +99,11 @@ bash word_evaluate.sh
     - SimCSE
 
 - **Sentence Level Similarity and EvalRank**
+    - You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
 
 ```
 bash sentence_evaluate.sh
 ```
-
-You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
-
 
 
 ## Benchmarking - Word
