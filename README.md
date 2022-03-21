@@ -11,7 +11,7 @@
 - **Mar.21, 2022: Sentence Embedding Evaluation part is finished.**
 - **Mar.20, 2022: Word Embedding Evaluation part is finished.**
 
-### Outline
+## Outline
 
 <div align="center">
 
@@ -44,7 +44,7 @@ If you find our package useful, please cite our paper.
 ```
     - Will update the ACL proceeding once it is out.
 
-### Introduction
+## Introduction
 
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
 
@@ -59,7 +59,7 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
     - Semantic Textual Similarity (STS) Tasks
         - STS 12~16, STS-Benchmark, [STR](https://arxiv.org/pdf/2110.04845.pdf)
 
-### Environment Setup
+## Environment Setup
 
 Tested with the following dependencies:
 - python==3.8.12
@@ -71,7 +71,7 @@ Please lookinto the details of the following script file for setting up the envi
 
     bash environment.sh
 
-### Supported Architectures 
+## Supported Architectures 
 
 We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
 
@@ -82,7 +82,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Bag-of-word (averaging word embedding), Bag-of-word with post-processing, InferSent, BERT
     - BERT-Whitening, BERT-Flow, Sentence-BERT, SimCSE
 
-### Quick User Guide
+## Quick User Guide
 
 - **Word Level Similarity and EvalRank**
 
@@ -98,7 +98,7 @@ To test on your own model, simply change the word embedding path.
 bash sentence_evaluate.sh
 ```
 
-### Benchmarking - Word
+## Benchmarking - Word
 
 
 | Word Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
