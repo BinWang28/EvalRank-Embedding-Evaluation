@@ -24,4 +24,8 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch --yes
 
 conda install -c conda-forge python-dateutil --yes
 
-conda install -c huggingface transformers==4.11.3 --yes
+#conda install -c huggingface transformers==4.11.3 --yes
+
+
+pip install httplib2
+pip install transformers==4.11.3

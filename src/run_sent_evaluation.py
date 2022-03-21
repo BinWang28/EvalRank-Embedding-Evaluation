@@ -30,7 +30,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # Base
     parser.add_argument("--sent_emb_model", type=str, default=None,
-                        help="name of sentence embedding mdoel, (bow, infersent, bert, bert-flow, simcse, sbert)")
+                        help="name of sentence embedding mdoel")
     parser.add_argument("--eval_type", type=str, default=None,
                         help="evaluation types: similarity,ranking,classification")   
     parser.add_argument("--dist_metric", type=str, default='cos',

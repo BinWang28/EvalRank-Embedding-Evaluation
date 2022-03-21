@@ -92,8 +92,9 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
                     continue
 
     sents_embs = np.stack(sents_embs)
+    sents_embs = bertwhitening_post_process(sents_embs)
 
-    self.sent2id    = sent2id
+    self.sent2id        = sent2id
     self.sents_embs = sents_embs
 
     if centralization:
@@ -102,3 +103,19 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
 
     if normalization:
             self.normalizing_sent_vectors()
+
+
+def bertwhitening_post_process(sents_embs):
+    '''bert-whitening model'''
+
+    logging.debug("Perform Whitening")
+
+    all_embs = sents_embs
+    mean     = all_embs.mean(axis=0, keepdims=True)
+    cov      = np.cov(all_embs.T)
+    u, s, _  = np.linalg.svd(cov)
+    W        = np.dot(u, np.diag(np.sqrt(1/s)))
+
+    new_embs = (all_embs-mean).dot(W)
+
+    return new_embs

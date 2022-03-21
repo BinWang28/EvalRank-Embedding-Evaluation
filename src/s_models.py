@@ -36,16 +36,32 @@ class Sent_embedding_model:
             from models.sent_emb._bow import embedder_init, embedder_infer_all
         
         # Model - 2
-        if config.sent_emb_model == 'bow_pp':
+        elif config.sent_emb_model == 'bow_pp':
             from models.sent_emb._bow_pp import embedder_init, embedder_infer_all
 
         # Model - 3
-        if config.sent_emb_model == 'infersent':
+        elif config.sent_emb_model == 'infersent':
             from models.sent_emb._infersent import embedder_init, embedder_infer_all
 
         # Model - 4
-        if config.sent_emb_model == 'bert':
+        elif config.sent_emb_model == 'bert':
             from models.sent_emb._bert import embedder_init, embedder_infer_all
+
+        # Model - 5
+        elif config.sent_emb_model == 'bert-whitening':
+            from models.sent_emb._bert_whitening import embedder_init, embedder_infer_all
+
+        # Model - 6
+        elif config.sent_emb_model == 'bert-flow':
+            from models.sent_emb._bert_flow import embedder_init, embedder_infer_all
+
+        # Model - 7
+        elif config.sent_emb_model == 'sentence_bert':
+            from models.sent_emb._sentence_bert import embedder_init, embedder_infer_all
+
+        # Model - 8
+        elif config.sent_emb_model == 'simcse':
+            from models.sent_emb._simcse import embedder_init, embedder_infer_all
 
         # Model - customize
         elif config.sent_emb_model == 'customize':

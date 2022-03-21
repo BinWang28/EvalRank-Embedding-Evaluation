@@ -25,32 +25,36 @@ from transformers import AutoTokenizer, AutoModel
 def embedder_init(self, config):
     ''' initialize for sentence embedding '''
 
-    logging.info("BERT Model Preparation")
+    logging.info("Sentence BERT Model Preparation")
+
     self.model_name_or_path = config.model_spec
-    self.pooling            = config.pooler
+    self.pooling            = 'last'
     self.cache_dir          = './cache'
     self.device             = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    self.tokenizer  = AutoTokenizer.from_pretrained(self.model_name_or_path, cache_dir=self.cache_dir)
-    self.bert_model = AutoModel.from_pretrained(self.model_name_or_path, cache_dir=self.cache_dir).to(self.device)
-
-
+    self.tokenizer   = AutoTokenizer.from_pretrained(self.model_name_or_path, cache_dir=self.cache_dir)
+    self.sbert_model = AutoModel.from_pretrained(self.model_name_or_path, cache_dir=self.cache_dir).to(self.device)
 
 def embedder_infer_all(self, sent_list, normalization, centralization):
-    ''' inference package for embedding for all needed sentences '''
+    ''' inference to obtain sentence embedding '''
 
+    def mean_pooling(model_output, attention_mask):
+        token_embeddings = model_output[0] #First element of model_output contains all token embeddings
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
-    logging.debug("Compute BERT features")
+    logging.debug("Compute SBERT embeddings")
 
     sent2id        = {}
-    sents_embs = []
+    sents_embs     = []
     count          = 0
     ex_batch_size  = 64
     ex_max_batches = math.ceil(len(sent_list)/float(ex_batch_size))
-    
-    self.bert_model.eval()
+
+    self.sbert_model.eval()
+
     with torch.no_grad():
-        for cur_batch in trange(ex_max_batches, unit="batches", leave=False):
+        for cur_batch in trange(ex_max_batches):
 
             cur_sents = sent_list[cur_batch*ex_batch_size:cur_batch*ex_batch_size+ex_batch_size]
 
@@ -63,30 +67,21 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
                 truncation         = True
             ).to(self.device)
 
-            all_hidden_states = self.bert_model(
+            embeddings = self.sbert_model(
                 input_ids            = model_inputs['input_ids'],
                 attention_mask       = model_inputs['attention_mask'],
                 output_hidden_states = True,
                 return_dict          = True
-                ).hidden_states
+                )
 
-            lengths = model_inputs['attention_mask'].sum(dim=1, keepdim=True)  # (bsz, 1)
-
-            if self.pooling == 'cls':
-                bt_ori_emb = all_hidden_states[-1][:,0]
-            elif self.pooling == 'last-avg':
-                bt_ori_emb = ((all_hidden_states[-1] * model_inputs['attention_mask'].unsqueeze(-1)).sum(dim=1)).div(lengths)  # (bsz, hdim)
-            elif self.pooling == 'first-last-avg':
-                bt_ori_emb = ((all_hidden_states[1] * model_inputs['attention_mask'].unsqueeze(-1)).sum(dim=1) + \
-                                (all_hidden_states[-1] * model_inputs['attention_mask'].unsqueeze(-1)).sum(dim=1)
-                            ).div(2 * lengths)  # (bsz, hdim)
+            embeddings = mean_pooling(embeddings, model_inputs['attention_mask'])
 
             for bt_index in range(len(cur_sents)):
                 sent = cur_sents[bt_index]
                 if sent not in sent2id:
                     sent2id[sent] = count
                     count   = count + 1
-                    ori_emb = bt_ori_emb[bt_index].squeeze().cpu().numpy()
+                    ori_emb = embeddings[bt_index].squeeze().cpu().numpy()
                     sents_embs.append(ori_emb)
                 else:
                     continue
