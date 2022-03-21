@@ -18,24 +18,19 @@ import logging
 import numpy as np
 from tqdm import tqdm
 
-from w_model import Word_embedding_model
-
-# Bag-of-word feature (averaging word embeddings)
+# customize your own sentence embedding model
 
 def embedder_init(self, config):
     ''' initialize for bow sentence embedding '''
 
-    config = copy.deepcopy(config) # to not influence other
+    # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    # sentence embedding model initialization if needed
+    #
 
-    assert config.bow_we_path != None, "Must specific the word embedding path if using BOW model"
 
-    logging.info('BOW sentence embedding')
+        
+    # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-    config.word_emb_model   = config.bow_we_path
-    config.normalization    = False # for word embedding normalization
-    config.post_process     = 'False' # for word embedding post-processing
-    config.centralization   = False # for word embedding centralizing
-    self.our_word_emb_model = Word_embedding_model(config)
 
 
 def embedder_infer_all(self, sent_list, normalization, centralization):
@@ -52,24 +47,15 @@ def embedder_infer_all(self, sent_list, normalization, centralization):
             count += 1
         else:
             continue
-
-        # skip words not in vocab
-        # use zero vector for unknown sents
-        sent_split = sent.lower().split()
-
-        sentvec = []
-        for word in sent_split:
-            if word in self.our_word_emb_model.vocab:
-                sentvec.append(self.our_word_emb_model.compute_embedding(word))
-            else:
-                continue
         
-        # if not words are found, use zeros as the representation
-        if not sentvec:
-            vec = np.zeros(self.our_word_emb_model.wvec_dim) + 1e-9
-            sentvec.append(vec)
-            
-        sentvec = np.mean(sentvec, 0)
+        # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        # sentvec = your model output vector for current sentence
+        #
+
+
+
+        # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
         sents_embs.append(sentvec)
    
     sents_embs = np.stack(sents_embs)

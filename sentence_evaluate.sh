@@ -9,9 +9,9 @@ echo " "
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-SENT_EMB_MODEL='bow' # bow, 
-BOW_WE_PATH='src/models/toy_emb.txt'
-BOW_WE_PATH='/data07/binwang/research/EvalRank/models/glove/glove.6B.50d.txt'
+SENT_EMB_MODEL='bow' # bow, bow_pp,
+BOW_WE_PATH='src/models/word_emb/toy_emb.txt'
+#BOW_WE_PATH='/data07/binwang/research/EvalRank/models/glove/glove.6B.50d.txt'
 EVAL_TYPE='ranking,similarity,classification' # ranking,similarity,classification
 DIST_METRIC='cos' # only for ranking
 
