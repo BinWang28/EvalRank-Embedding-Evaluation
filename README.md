@@ -100,10 +100,11 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 - **Sentence Level Similarity and EvalRank**
     - You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
+    - todo,customize
 
-```
-bash sentence_evaluate.sh
-```
+    ```
+    bash sentence_evaluate.sh
+    ```
 
 
 ## Benchmarking - Word
