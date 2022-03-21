@@ -114,6 +114,20 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     update file: ./src/models/sent_emb/_customize.py
     ```
 
+    For better classification performance (in file src/s_evaluation.py):
+    change
+    ```
+    params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
+    params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
+                                    'tenacity': 3, 'epoch_size': 2}
+    ```
+    to
+    ```
+    params_senteval.update({'task_path': PATH_TO_DATA, 'usepytorch': True, 'kfold': 10})
+    params_senteval['classifier'] = {'nhid': 50, 'optim': 'adam', 'batch_size': 64,
+                                    'tenacity': 5, 'epoch_size': 4}
+    ```
+
 
 ## Benchmarking - Word
 
