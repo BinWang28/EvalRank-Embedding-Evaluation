@@ -36,11 +36,9 @@ if __name__ == '__main__':
     parser.add_argument("--dist_metric", type=str, default='cos',
                         help="distance measure metric for the ranking evaluation only: cos, l2")  
 
-
     # bow parameters
     parser.add_argument("--bow_we_path", type=str, default=None,
                         help="word embedding path for bow model")
-
 
     # infersent parameters
     parser.add_argument("--infersent_version", type=str, default='v1',
@@ -49,7 +47,6 @@ if __name__ == '__main__':
                         help="path to infersent model")
     parser.add_argument("--infersent_emb_path", type=str, default='v1',
                         help="path of glove (v1) or fasttext (v2)")
-
 
     # bert-based model specification
     parser.add_argument("--model_spec", type=str, default=None,

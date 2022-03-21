@@ -58,6 +58,12 @@ In this project, we provide an easy-to-use toolkit for both word and sentence em
 
 ### Environment Setup
 
+Tested with the following dependencies:
+- python==3.8.12
+- pytorch==1.11.0
+- transformers==4.11.3
+- scikit-learn==0.23.2
+
 Please lookinto the details of the following script file for setting up the environment.
 
     bash environment.sh

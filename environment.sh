@@ -22,4 +22,6 @@ conda install -c conda-forge prettytable --yes
 
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch --yes
 
-conda install -c conda-forge python-dateutil
+conda install -c conda-forge python-dateutil --yes
+
+conda install -c huggingface transformers==4.11.3 --yes

@@ -12,12 +12,7 @@
 # ----------			---	----------------------------------------------------------
 ###
 
-import copy
 import logging
-
-import numpy as np
-from tqdm import tqdm
-
 import torch
 
 def embedder_init(self, config):

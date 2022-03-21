@@ -43,6 +43,10 @@ class Sent_embedding_model:
         if config.sent_emb_model == 'infersent':
             from models.sent_emb._infersent import embedder_init, embedder_infer_all
 
+        # Model - 4
+        if config.sent_emb_model == 'bert':
+            from models.sent_emb._bert import embedder_init, embedder_infer_all
+
         # Model - customize
         elif config.sent_emb_model == 'customize':
             from models.sent_emb._customize import embedder_init, embedder_infer_all
