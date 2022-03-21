@@ -1,4 +1,4 @@
-# Word & Sentence Embedding Evaluation
+## Word & Sentence Embedding Evaluation
 
 <p align="center">
   <img src="img/logo.png" width="600" height="auto" />
