@@ -6,7 +6,8 @@
 
 ### Update
 
-- **Mar.21, 2022**: Follow the template to test on your own embedding model.
+- **Mar.21, 2022**
+    - Follow the template to test on your own embedding model.
 - **Mar.21, 2022**: Support a series of sentence embedding models including InferSent, SimCSE, Sentence_BERT, BERT-Whitening, BERT-Flow.
 - **Mar.21, 2022**: Sentence Embedding Evaluation part is finished.
 - **Mar.20, 2022**: Word Embedding Evaluation part is finished.
