@@ -86,7 +86,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 ```
 bash word_evaluate.sh
 ```   
-To test on your own model, simply change the word embedding path.
+    - To test on your own model, simply change the word embedding path.
 
 - **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding)
