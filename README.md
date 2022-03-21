@@ -122,14 +122,24 @@ bash sentence_evaluate.sh
 
 
 - More benchmarking results can be found in this page: [word_evalrank](./benchmarking/word_evalrank.md), [word_similarity](./benchmarking/word_similarity.md).
+- More benchmarking results can also be found in scripts and their corresponding logs.
 
 
-### Benchmarking - Sentence
+## Benchmarking - Sentence
 
-TODO: table for benchmarking results
+| Sentence Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
+| :--- | :---: | :---: | :---: |
+| toy_emb.txt | xxxx | xxxx | xxxx |
+| [glove.840B.300d.txt](https://nlp.stanford.edu/projects/glove/) | xxxx | xxxx | xxxx |
+| [crawl-300d-2M.vec](https://fasttext.cc/docs/en/english-vectors.html) | xxxx | xxxx | xxxx |
+| InferSent | xxxx | xxxx | xxxx |
+| BERT(last-avg) | xxxx | xxxx | xxxx |
+| BERT(first-last-avg) | xxxx | xxxx | xxxx |
+| BERT-whitening | xxxx | xxxx | xxxx |
+| Sentence-BERT | xxxx | xxxx | xxxx |
+| SimCSE | xxxx | xxxx | xxxx |
 
-
-### Acknowledge
+## Acknowledge
 
 - We borrow a big portion of sentence embedding evaluation from [SentEval](https://github.com/facebookresearch/SentEval). Please consider cite their work if you found that part useful.
 
