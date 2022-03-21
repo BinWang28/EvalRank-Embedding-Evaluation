@@ -12,23 +12,9 @@
 # ----------			---	----------------------------------------------------------
 ###
 
-
 import sys
-import math
-import random
 import logging
-
 import numpy as np
-
-from tqdm import tqdm, trange
-
-#import torch
-#from sklearn.decomposition import TruncatedSVD
-#from transformers.utils.dummy_pt_objects import AutoModel
-
-#from transformers import AutoTokenizer, AutoModel
-
-
 
 class Sent_embedding_model:
     ''' wrapper for sentence embedding models '''
@@ -52,6 +38,10 @@ class Sent_embedding_model:
         # Model - 2
         if config.sent_emb_model == 'bow_pp':
             from models.sent_emb._bow_pp import embedder_init, embedder_infer_all
+
+        # Model - 3
+        if config.sent_emb_model == 'infersent':
+            from models.sent_emb._infersent import embedder_init, embedder_infer_all
 
         # Model - customize
         elif config.sent_emb_model == 'customize':

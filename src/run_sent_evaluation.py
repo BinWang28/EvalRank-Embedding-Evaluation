@@ -35,15 +35,26 @@ if __name__ == '__main__':
                         help="evaluation types: similarity,ranking,classification")   
     parser.add_argument("--dist_metric", type=str, default='cos',
                         help="distance measure metric for the ranking evaluation only: cos, l2")  
+
+
     # bow parameters
     parser.add_argument("--bow_we_path", type=str, default=None,
                         help="word embedding path for bow model")
+
+
     # infersent parameters
     parser.add_argument("--infersent_version", type=str, default='v1',
                         help="version for infersent model")
-    # model specification
+    parser.add_argument("--infersent_model_path", type=str, default=None,
+                        help="path to infersent model")
+    parser.add_argument("--infersent_emb_path", type=str, default='v1',
+                        help="path of glove (v1) or fasttext (v2)")
+
+
+    # bert-based model specification
     parser.add_argument("--model_spec", type=str, default=None,
                         help="model specifications")
+
     # bert only
     parser.add_argument("--pooler", type=str, default=None,
                         help="pooling method for bert models (cls, last-avg, first-last-avg)")
