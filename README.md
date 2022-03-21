@@ -105,6 +105,8 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
     ```
     bash sentence_evaluate.sh
+    SENT_EMB_MODEL='customize'
+    update file: ./src/models/sent_emb/_customize.py
     ```
 
 
