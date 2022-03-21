@@ -111,6 +111,7 @@ bash sentence_evaluate.sh
 
 ## Benchmarking - Word
 
+<div align="center">
 
 | Word Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
@@ -120,12 +121,15 @@ bash sentence_evaluate.sh
 | [crawl-300d-2M.vec](https://fasttext.cc/docs/en/english-vectors.html) | **17.22** | **5.77** | **19.99** |
 | [dict2vec-300d.vec](https://github.com/tca19/dict2vec) | 12.71 | 4.04 | 13.04 |
 
+</div>
 
 - More benchmarking results can be found in this page: [word_evalrank](./benchmarking/word_evalrank.md), [word_similarity](./benchmarking/word_similarity.md).
 - More benchmarking results can also be found in scripts and their corresponding logs.
 
 
 ## Benchmarking - Sentence
+
+<div align="center">
 
 | Sentence Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
@@ -138,6 +142,8 @@ bash sentence_evaluate.sh
 | BERT-whitening | xxxx | xxxx | xxxx |
 | Sentence-BERT | xxxx | xxxx | xxxx |
 | SimCSE | xxxx | xxxx | xxxx |
+
+</div>
 
 ## Acknowledge
 
