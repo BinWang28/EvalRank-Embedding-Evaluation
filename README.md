@@ -129,7 +129,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
                                     'tenacity': 5, 'epoch_size': 4}
     ```
 
-**For a complete set of evaluation performance, refer to the bash and log files in scripts/**
+**For a complete set of model performance, refer to the bash and log files in [scripts/](scripts/)**
 
 ## Benchmarking - Word
 
@@ -155,15 +155,14 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 | Sentence Embedding (cos) | EvalRank (MRR) | Hits1 | Hits3 |
 | :--- | :---: | :---: | :---: |
-| toy_emb.txt | xxxx | xxxx | xxxx |
-| [glove.840B.300d.txt](https://nlp.stanford.edu/projects/glove/) | xxxx | xxxx | xxxx |
-| [crawl-300d-2M.vec](https://fasttext.cc/docs/en/english-vectors.html) | xxxx | xxxx | xxxx |
-| InferSent | xxxx | xxxx | xxxx |
-| BERT(last-avg) | xxxx | xxxx | xxxx |
-| BERT(first-last-avg) | xxxx | xxxx | xxxx |
-| BERT-whitening | xxxx | xxxx | xxxx |
-| Sentence-BERT | xxxx | xxxx | xxxx |
-| SimCSE | xxxx | xxxx | xxxx |
+| toy_emb.txt | 41.15 | 28.79 | 49.65 |
+| [glove.840B.300d.txt](https://nlp.stanford.edu/projects/glove/) | 61.00 | 44.94 | 74.66 |
+| InferSentv1 | 60.72 | 41.92 | 77.21 |
+| InferSentv2 | 63.89 | 45.59 | 80.47 |
+| BERT(first-last-avg) | 68.01 | 51.70 | 81.91 |
+| BERT-whitening | 66.58 | 46.54 | 84.22 |
+| Sentence-BERT | 64.12 | 47.07 | 79.05 |
+| SimCSE | 69.50 | 52.34 | 84.43 |
 
 </div>
 

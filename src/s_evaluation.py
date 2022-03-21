@@ -147,7 +147,9 @@ class Sent_emb_evaluator:
         table = PrettyTable(['Scores', 'Emb'])
         table.add_row(['MR', MR])
         table.add_row(['MRR', MRR])
-        for i in range(hits_max_bound): table.add_row(['Hits@'+str(i+1), res_rank['hits_'+str(i+1)]])
+        for i in range(hits_max_bound): 
+            if i in [0,2]:
+                table.add_row(['Hits@'+str(i+1), res_rank['hits_'+str(i+1)]])
         logging.info('Experimental results on ranking')
         logging.info("\n"+str(table))
 
