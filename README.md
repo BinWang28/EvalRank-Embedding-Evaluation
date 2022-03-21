@@ -81,6 +81,16 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 - **Word Embedding Models**
     - Any word embedding files follow this [format](./src/models/word_emb/).
     - Integrate one post-processing method.
+
+    - **Word Level Similarity and EvalRank**
+
+    ```
+    bash word_evaluate.sh
+    ```
+    
+    To test on your own model, simply change the word embedding path.
+
+
 - **Sentence Embedding Models**
     - Bag-of-word (averaging word embedding)
     - Bag-of-word with post-processing
@@ -93,13 +103,9 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
 
-## Quick User Guide
+#### Quick User Guide
 
-- **Word Level Similarity and EvalRank**
 
-```
-bash word_evaluate.sh
-```
 
 To test on your own model, simply change the word embedding path.
 
