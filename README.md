@@ -162,7 +162,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 | BERT(first-last-avg) | 68.01 | 51.70 | 81.91 |
 | BERT-whitening | 66.58 | 46.54 | 84.22 |
 | Sentence-BERT | 64.12 | 47.07 | 79.05 |
-| SimCSE | 69.50 | 52.34 | 84.43 |
+| SimCSE | **69.50** | **52.34** | **84.43** |
 
 </div>
 
