@@ -82,14 +82,14 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Any word embedding files follow this [format](./src/models/word_emb/).
     - Integrate one post-processing method.
 - **Sentence Embedding Models**
-    - **Bag-of-word (averaging word embedding)**
-    - **Bag-of-word with post-processing**
-    - **InferSent**
-    - **BERT**
-    - **BERT-Whitening**
-    - **BERT-Flow**
-    - **Sentence-BERT**
-    - **SimCSE**
+    - Bag-of-word (averaging word embedding)
+    - Bag-of-word with post-processing
+    - InferSent
+    - BERT
+    - BERT-Whitening
+    - BERT-Flow
+    - Sentence-BERT
+    - SimCSE
 
 ## Quick User Guide
 
