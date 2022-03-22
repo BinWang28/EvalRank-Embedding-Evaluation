@@ -71,7 +71,7 @@ Tested with the following dependencies:
 - transformers==4.11.3
 - scikit-learn==0.23.2
 
-Please lookinto the details of the following script file for setting up the environment.
+Please look into the details of the following script file for how to set up the environment.
 
     bash environment.sh
 
