@@ -5,7 +5,8 @@
 </p>
 
 ### Update
-
+- **Mar. 22, 2022**
+    - x
 - **Mar.21, 2022**
     - Follow the template to test on your own embedding model.
 - **Mar.21, 2022**
@@ -20,7 +21,7 @@
 
 | Section | Description |
 |-|-|
-| [Reference](#Reference)											| Reference                    	    |
+| [Reference](#References)											| Reference                    	    |
 | [Introduction](#Introduction)          							| Overview                 		    |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
 | [Supported Architectures](#Supported-Architectures) 				| Architectures and Quick Start     |
