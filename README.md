@@ -8,8 +8,7 @@
 - **Mar. 22, 2022**
     - More example scripts for how to test on each supported model.
 - **Mar.21, 2022**
-    - Follow the template to test on your own embedding model.
-- **Mar.21, 2022**
+    - You can now follow the template to test on your [own embedding model](#Models-and-Quick-Start). 
     - Support a series of sentence embedding models including [InferSent, SimCSE, Sentence_BERT, BERT-Whitening, BERT-Flow](src/models/sent_emb/).
     - Sentence Embedding Evaluation part is finished.
 - **Mar.20, 2022**
