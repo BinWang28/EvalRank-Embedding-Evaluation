@@ -21,7 +21,7 @@
 
 | Section | Description |
 |-|-|
-| [Reference](#References)											| Reference                    	    |
+| [Reference](#References)											| References                    	    |
 | [Introduction](#Introduction)          							| Overview                 		    |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
 | [Supported Architectures](#Supported-Architectures) 				| Architectures and Quick Start     |
