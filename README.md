@@ -21,10 +21,10 @@
 
 | Section | Description |
 |-|-|
-| [References](#References)											| References                    	    |
+| [References](#References)											| References                    	|
 | [Introduction](#Introduction)          							| Overview                 		    |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
-| [Supported Architectures](#Supported-Architectures) 				| Architectures and Quick Start     |
+| [Models and Quick Start](#Models-and-Quick-Start) 				| Models and Quick Start            |
 | [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
 | [Benchmarking - Sentence](#Benchmarking---Sentence)				| Leaderboard              		    |
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
@@ -74,7 +74,7 @@ Please lookinto the details of the following script file for setting up the envi
 
     bash environment.sh
 
-## Supported Architectures 
+## Models and Quick Start
 
 We have supoorted a list of word & sentence embedding models for quick evaluation and benchmarking.
 
