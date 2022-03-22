@@ -49,7 +49,7 @@ If you find our package useful, please cite our paper.
 
 ## Introduction
 
-In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.
+In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations. The following are the supported evaluation tasks:
 
 - **Word Embedding Evaluation**
     - [EvalRank (Word-Level)](https://arxiv.org/abs/2203.02679)
