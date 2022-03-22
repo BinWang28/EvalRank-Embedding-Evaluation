@@ -114,9 +114,8 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     update file: ./src/models/sent_emb/_customize.py
     ```
 
-    For better **classification** performance (in file src/s_evaluation.py):
+    For better **classification** performance, edit the following part (in file [src/s_evaluation.py](src/s_evaluation.py)):
 
-    change
     ```
     params_senteval = {'task_path': './data/', 'usepytorch': True, 'kfold': 5}
     params_senteval['classifier'] = {'nhid': 0, 'optim': 'rmsprop', 'batch_size': 128,
@@ -129,7 +128,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
                                     'tenacity': 5, 'epoch_size': 4}
     ```
 
-**For a complete set of model performance, refer to the bash and log files in [scripts/](scripts/)**
+**For a complete set of model performance, refer to the bash and log files in [scripts/](scripts/). Simply run the corresponding script for results.**
 
 ## Benchmarking - Word
 
