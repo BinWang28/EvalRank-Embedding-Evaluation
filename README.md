@@ -1,6 +1,6 @@
 ## Word & Sentence Embedding Evaluation
 
-In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations. 
+**In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.**
 
 <p align="center">
   <img src="img/logo.png" width="600" height="auto" />
