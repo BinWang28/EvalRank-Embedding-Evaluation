@@ -1,5 +1,7 @@
 ## Word & Sentence Embedding Evaluation
 
+In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations. 
+
 <p align="center">
   <img src="img/logo.png" width="600" height="auto" />
 </p>
@@ -48,7 +50,7 @@ If you find our package useful, please cite our paper.
 
 ## Evluation Tasks
 
-In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations. The following are the supported evaluation tasks:
+The following are the supported evaluation tasks:
 
 - **Word Embedding Evaluation**
     - [EvalRank (Word-Level)](https://arxiv.org/abs/2203.02679)
