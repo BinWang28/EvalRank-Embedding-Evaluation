@@ -21,7 +21,7 @@
 | Section | Description |
 |-|-|
 | [References](#References)											| References                    	|
-| [Introduction](#Introduction)          							| Overview                 		    |
+| [Evluation Tasks](#Evluation-Tasks)          						| Evluation Tasks                   |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
 | [Models and Quick Start](#Models-and-Quick-Start) 				| Models and Quick Start            |
 | [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
@@ -46,7 +46,7 @@ If you find our package useful, please cite our paper.
 ```
     - Will update the ACL proceeding once it is out.
 
-## Introduction
+## Evluation Tasks
 
 In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations. The following are the supported evaluation tasks:
 
