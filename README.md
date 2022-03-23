@@ -159,7 +159,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 If you find our package useful, please cite our paper.
 - [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
-    - To appear in **ACL 2022 Main Conference**
+    - ACL 2022 Main Conference
 
 ```
 @article{evalrank_2022,
