@@ -70,7 +70,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Any word embedding files follow this [format](./src/models/word_emb/).
     - Integrate one post-processing method.
 
-- **Word Level Similarity and EvalRank**
+- **Word-level EvalRank and Similarity**
     - To test on your own model, simply change the word embedding path.
 
     ```
@@ -91,7 +91,7 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
     - Sentence-BERT
     - SimCSE
 
-- **Sentence Level Similarity and EvalRank**
+- **Sentence-level EvalRank and Similarity**
     - You can also easily test your own sentence embedding model using our provided [template](src/models/sent_emb/_customize.py).
 
     ```
