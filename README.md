@@ -24,31 +24,16 @@
 
 | Section | Description |
 |-|-|
-| [References](#References)											| References                    	|
 | [Evluation Tasks](#Evluation-Tasks)          						| Evluation Tasks                   |
 | [Environment Setup](#Environment-Setup) 							| Environments             		    |
 | [Models and Quick Start](#Models-and-Quick-Start) 				| Models and Quick Start            |
 | [Benchmarking - Word](#Benchmarking---Word)						| Leaderboard              		    |
 | [Benchmarking - Sentence](#Benchmarking---Sentence)				| Leaderboard              		    |
+| [References](#References)											| References                    	|
 | [Acknowledge](#Acknowledge)										| Acknowledge		   		 		|
 
 </div>
 
-### References
-
-If you find our package useful, please cite our paper.
-- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
-    - To appear in **ACL 2022 Main Conference**
-
-```
-@article{evalrank_2022,
-  title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
-  author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
-  journal={arXiv preprint arXiv:2203.02679},
-  year={2022}
-}
-```
-    - Will update the ACL proceeding once it is out.
 
 ## Evluation Tasks
 
@@ -169,9 +154,26 @@ We have supoorted a list of word & sentence embedding models for quick evaluatio
 
 </div>
 
+
+### References
+
+If you find our package useful, please cite our paper.
+- [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)
+    - To appear in **ACL 2022 Main Conference**
+
+```
+@article{evalrank_2022,
+  title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
+  author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
+  journal={arXiv preprint arXiv:2203.02679},
+  year={2022}
+}
+```
+    - Will update the ACL proceeding once it is out.
+
 ## Acknowledge
 
-- We borrow a big portion of sentence embedding evaluation from [SentEval](https://github.com/facebookresearch/SentEval). Please consider cite their work if you found that part useful.
+- We borrow a portion of sentence embedding evaluation from [SentEval](https://github.com/facebookresearch/SentEval). Please consider cite their work if you found that part useful.
 
 
 Contact Info: [bwang28c@gmail.com](mailto:bwang28c@gmail.com).
