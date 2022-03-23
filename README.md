@@ -2,7 +2,7 @@
 
 **In this project, we provide an easy-to-use toolkit for both word and sentence embedding evaluations.**
 
-**Please refer to our ACL 2022 paper for more details: [**Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)**
+**For more details: [**ACL 2022: Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://arxiv.org/abs/2203.02679)**
 
 <p align="center">
   <img src="img/logo.png" width="600" height="auto" />
