@@ -169,7 +169,7 @@ If you find our package useful, please cite our paper.
   year={2022}
 }
 ```
-    - Will update the ACL proceeding once it is out.
+    - Will update the ACL proceeding once it is out
 
 ## Acknowledge
 
