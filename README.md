@@ -162,6 +162,22 @@ If you find our package useful, please cite our paper.
     - ACL 2022 Main Conference
 
 ```
+@inproceedings{wang-etal-2022-just,
+    title = "Just Rank: Rethinking Evaluation with Word and Sentence Similarities",
+    author = "Wang, Bin  and
+      Kuo, C.-c.  and
+      Li, Haizhou",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.419",
+    pages = "6060--6077"
+}
+```
+
+```
 @article{evalrank_2022,
   title={Just Rank: Rethinking Evaluation with Word and Sentence Similarities},
   author={Wang, Bin and Kuo, C.-C. Jay and Li, Haizhou},
