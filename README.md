@@ -165,7 +165,7 @@ If you find our package useful, please cite our paper.
 @inproceedings{wang-etal-2022-just,
     title = "Just Rank: Rethinking Evaluation with Word and Sentence Similarities",
     author = "Wang, Bin  and
-      Kuo, C.-c.  and
+      Kuo, C.-C.  and
       Li, Haizhou",
     booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
     month = may,
@@ -185,7 +185,7 @@ If you find our package useful, please cite our paper.
   year={2022}
 }
 ```
-    - Will update the ACL proceeding once it is out
+
 
 ## Acknowledge
 
