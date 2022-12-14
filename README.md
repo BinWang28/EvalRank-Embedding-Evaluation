@@ -6,7 +6,6 @@
 
 [(Poster)](JustRank.pdf)
 [(Slides)](slides.pdf)
-
 [(Video)](https://youtu.be/WlXUUiJrHpM)
 
 
