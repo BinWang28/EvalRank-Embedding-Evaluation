@@ -4,8 +4,8 @@
 
 **For more details: [**ACL 2022: Just Rank: Rethinking Evaluation with Word and Sentence Similarities**](https://aclanthology.org/2022.acl-long.419/)**
 
-[(Poster)](JustRank.pdf)
-[(Slides)](slides.pdf)
+[(Slides)](JustRank.pdf)
+[(Poster)](poster.pdf)
 [(Video)](https://youtu.be/WlXUUiJrHpM)
 
 
